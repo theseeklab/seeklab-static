@@ -1,0 +1,1797 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<title>SeekLab Retrospective</title>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="assets/917cbc15-fa18-47d2-b62c-7aad91810500.js"></script>
+
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics="">
+<link rel="icon" href="assets/favicon-32x32.png">
+<style>/* cyrillic-ext */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/f1403baa-7c28-4e7e-b5fd-89f86445e39a.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/813a9afc-86df-4602-988e-9290f2c8c549.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/ced666d5-0d12-4e06-a7bc-34de78e28a7b.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/beaa06e5-d65d-469b-82ad-aecff6e44443.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/c7cfad29-94da-4da3-b543-0d77003d6978.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/64fd1bcc-bdcf-4a60-80e0-ace15debd7ba.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/680beea5-5647-4936-99ec-291bf42f9899.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/9a44c629-455f-4ea5-948d-b6ebe5e60714.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/bb7c8bdc-3f65-4145-8bf1-77fac6e80e3b.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/813ed6bc-f744-4441-9e1b-a222d8850656.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/41b31eb3-4128-44bf-9692-e7b43b5637dc.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/5a5307be-e087-4c37-9b95-1f886932e26b.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/34cc6587-6bfe-4cc7-840d-caefeba2ee44.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/ba2dd706-a646-42f0-9a19-6a52d241dd38.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/9a44c629-455f-4ea5-948d-b6ebe5e60714.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/bb7c8bdc-3f65-4145-8bf1-77fac6e80e3b.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/813ed6bc-f744-4441-9e1b-a222d8850656.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/41b31eb3-4128-44bf-9692-e7b43b5637dc.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/5a5307be-e087-4c37-9b95-1f886932e26b.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/34cc6587-6bfe-4cc7-840d-caefeba2ee44.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("assets/ba2dd706-a646-42f0-9a19-6a52d241dd38.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/850f8fed-36b1-48d3-9ca8-3c7bb59053d5.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/f70ab394-25d4-4e21-8e53-851cf4cc875f.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/a26a0d14-1e4a-46fc-9535-412cee5c8965.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/b117a3df-1ed6-419f-b90d-fd70f69127fd.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* math */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/7cd59796-3088-4ac8-a233-9bee709c4d40.woff2") format('woff2');
+  unicode-range: U+0302-0303, U+0305, U+0307-0308, U+0310, U+0312, U+0315, U+031A, U+0326-0327, U+032C, U+032F-0330, U+0332-0333, U+0338, U+033A, U+0346, U+034D, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2016-2017, U+2034-2038, U+203C, U+2040, U+2043, U+2047, U+2050, U+2057, U+205F, U+2070-2071, U+2074-208E, U+2090-209C, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2100-2112, U+2114-2115, U+2117-2121, U+2123-214F, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B7, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+3030, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;
+}
+/* symbols */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/e95a776a-acb3-4fe8-ae4d-57f7151094ef.woff2") format('woff2');
+  unicode-range: U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AD, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F7FF, U+1F800-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8BB, U+1F8C0-1F8C1, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FA89, U+1FA8F-1FAC6, U+1FACE-1FADC, U+1FADF-1FAE9, U+1FAF0-1FAF8, U+1FB00-1FBFF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/b0edfaff-d014-4322-bc2b-b34113b688f4.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/2f7a3795-b31b-4b4b-a2cb-da07cf280bc6.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/3c9a2c16-3f9c-4284-bb31-08b252467634.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/850f8fed-36b1-48d3-9ca8-3c7bb59053d5.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/f70ab394-25d4-4e21-8e53-851cf4cc875f.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/a26a0d14-1e4a-46fc-9535-412cee5c8965.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/b117a3df-1ed6-419f-b90d-fd70f69127fd.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* math */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/7cd59796-3088-4ac8-a233-9bee709c4d40.woff2") format('woff2');
+  unicode-range: U+0302-0303, U+0305, U+0307-0308, U+0310, U+0312, U+0315, U+031A, U+0326-0327, U+032C, U+032F-0330, U+0332-0333, U+0338, U+033A, U+0346, U+034D, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2016-2017, U+2034-2038, U+203C, U+2040, U+2043, U+2047, U+2050, U+2057, U+205F, U+2070-2071, U+2074-208E, U+2090-209C, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2100-2112, U+2114-2115, U+2117-2121, U+2123-214F, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B7, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+3030, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;
+}
+/* symbols */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/e95a776a-acb3-4fe8-ae4d-57f7151094ef.woff2") format('woff2');
+  unicode-range: U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AD, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F7FF, U+1F800-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8BB, U+1F8C0-1F8C1, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FA89, U+1FA8F-1FAC6, U+1FACE-1FADC, U+1FADF-1FAE9, U+1FAF0-1FAF8, U+1FB00-1FBFF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/b0edfaff-d014-4322-bc2b-b34113b688f4.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/2f7a3795-b31b-4b4b-a2cb-da07cf280bc6.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/3c9a2c16-3f9c-4284-bb31-08b252467634.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/850f8fed-36b1-48d3-9ca8-3c7bb59053d5.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/f70ab394-25d4-4e21-8e53-851cf4cc875f.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/a26a0d14-1e4a-46fc-9535-412cee5c8965.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/b117a3df-1ed6-419f-b90d-fd70f69127fd.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* math */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/7cd59796-3088-4ac8-a233-9bee709c4d40.woff2") format('woff2');
+  unicode-range: U+0302-0303, U+0305, U+0307-0308, U+0310, U+0312, U+0315, U+031A, U+0326-0327, U+032C, U+032F-0330, U+0332-0333, U+0338, U+033A, U+0346, U+034D, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2016-2017, U+2034-2038, U+203C, U+2040, U+2043, U+2047, U+2050, U+2057, U+205F, U+2070-2071, U+2074-208E, U+2090-209C, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2100-2112, U+2114-2115, U+2117-2121, U+2123-214F, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B7, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+3030, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;
+}
+/* symbols */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/e95a776a-acb3-4fe8-ae4d-57f7151094ef.woff2") format('woff2');
+  unicode-range: U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AD, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F7FF, U+1F800-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8BB, U+1F8C0-1F8C1, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FA89, U+1FA8F-1FAC6, U+1FACE-1FADC, U+1FADF-1FAE9, U+1FAF0-1FAF8, U+1FB00-1FBFF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/b0edfaff-d014-4322-bc2b-b34113b688f4.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/2f7a3795-b31b-4b4b-a2cb-da07cf280bc6.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/3c9a2c16-3f9c-4284-bb31-08b252467634.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/850f8fed-36b1-48d3-9ca8-3c7bb59053d5.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/f70ab394-25d4-4e21-8e53-851cf4cc875f.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/a26a0d14-1e4a-46fc-9535-412cee5c8965.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/b117a3df-1ed6-419f-b90d-fd70f69127fd.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* math */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/7cd59796-3088-4ac8-a233-9bee709c4d40.woff2") format('woff2');
+  unicode-range: U+0302-0303, U+0305, U+0307-0308, U+0310, U+0312, U+0315, U+031A, U+0326-0327, U+032C, U+032F-0330, U+0332-0333, U+0338, U+033A, U+0346, U+034D, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2016-2017, U+2034-2038, U+203C, U+2040, U+2043, U+2047, U+2050, U+2057, U+205F, U+2070-2071, U+2074-208E, U+2090-209C, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2100-2112, U+2114-2115, U+2117-2121, U+2123-214F, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B7, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+3030, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;
+}
+/* symbols */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/e95a776a-acb3-4fe8-ae4d-57f7151094ef.woff2") format('woff2');
+  unicode-range: U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AD, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F7FF, U+1F800-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8BB, U+1F8C0-1F8C1, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FA89, U+1FA8F-1FAC6, U+1FACE-1FADC, U+1FADF-1FAE9, U+1FAF0-1FAF8, U+1FB00-1FBFF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/b0edfaff-d014-4322-bc2b-b34113b688f4.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/2f7a3795-b31b-4b4b-a2cb-da07cf280bc6.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("assets/3c9a2c16-3f9c-4284-bb31-08b252467634.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<script src="assets/40df8786-5b92-443e-a51a-0267f0985f0b.js"></script>
+<style>
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body { margin: 0; background: #fbfaf6; color: #14140f; font-family: 'EB Garamond', Georgia, serif; font-size: 17px; -webkit-font-smoothing: antialiased; }
+* { box-sizing: border-box; }
+a { color: #14140f; text-decoration: none; }
+a:hover { color: #5f5d54; }
+h1, h2, h3, h4, p { margin: 0; }
+@keyframes sl-rise { 0% { opacity: 0; transform: translateY(10px); } 100% { opacity: 1; transform: translateY(0); } }
+.sl-logo-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
+@media (max-width: 900px) {
+  .sl-logo-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+}
+@media (max-width: 640px) {
+  .sl-logo-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  header nav { gap: 16px !important; }
+}
+@media print { body { background: #fff; } }
+</style>
+</helmet>
+
+<div style="min-height:100vh">
+
+<header style="position:sticky;top:0;z-index:300;height:60px;display:flex;align-items:center;background:rgba(251,250,246,0.94);backdrop-filter:blur(6px)">
+<div style="width:100%;max-width:1180px;margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between;gap:32px">
+<a href="#top" style="display:inline-flex;align-items:center;gap:10px;color:#14140f;text-decoration:none">
+<img src="assets/seeklab-mark.png" alt="" width="28" height="28" style="width:28px;height:28px;object-fit:contain">
+<img src="assets/seeklab-wordmark.png" alt="SeekLab" width="110" height="24" style="height:18px;width:auto;object-fit:contain">
+</a>
+<nav style="display:flex;align-items:center;gap:28px;flex-wrap:wrap">
+<a href="#numbers" style="font-size:15px;color:#45443c">Numbers</a>
+<a href="#companies" style="font-size:15px;color:#45443c">Companies</a>
+<a href="#built" style="font-size:15px;color:#45443c">What we built</a>
+<a href="#video" style="font-size:15px;color:#45443c">Video</a>
+<a href="#timeline" style="font-size:15px;color:#45443c">Timeline</a>
+<a href="#team" style="font-size:15px;color:#45443c">Team</a>
+</nav>
+</div>
+</header>
+
+<section id="top" style="background:#fbfaf6">
+<div style="max-width:1180px;margin:0 auto;padding:92px 40px 80px;text-align:center">
+<div style="display:flex;justify-content:center;margin-bottom:28px;animation:sl-rise 0.8s ease-out both">
+<img src="assets/seeklab-mark.png" alt="SeekLab" width="56" height="56" style="width:56px;height:56px;object-fit:contain">
+</div>
+<p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#98958a;margin-bottom:40px;animation:sl-rise 0.8s ease-out 0.1s both">2024 – 2026</p>
+<h1 style="font-size:60px;line-height:1.1;font-weight:400;letter-spacing:-0.012em;max-width:920px;margin:0 auto 34px;text-wrap:pretty;animation:sl-rise 0.8s ease-out 0.2s both">We built the engine that put one thousand recruiters to work.</h1>
+<p style="font-size:19px;line-height:1.65;color:#45443c;max-width:660px;margin:0 auto 38px;text-wrap:pretty;animation:sl-rise 0.8s ease-out 0.3s both">SeekLab connected fast-growing companies to a network of industry-specialised recruiters through performance-based bounties — software instead of retainers, outcomes instead of invoices. This is what we shipped, and what it added up to.</p>
+</div>
+</section>
+
+<section id="numbers" data-screen-label="Numbers" style="background:#fbfaf6;padding:16px 0 84px">
+<div style="max-width:1180px;margin:0 auto;padding:0 40px">
+<p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#98958a;margin-bottom:20px">The ledger</p>
+<h2 style="font-size:40px;line-height:1.14;font-weight:400;letter-spacing:-0.012em;color:#14140f;max-width:620px;margin-bottom:44px;text-wrap:balance">Three years of hiring, in five numbers.</h2>
+<div style="border-top:1px solid #14140f">
+
+<div style="display:flex;align-items:baseline;justify-content:space-between;gap:40px;padding:30px 0;border-bottom:1px solid #e2e0d7">
+<span style="font-size:22px;color:#14140f">Placements made</span>
+<span data-count-to="100" data-count-suffix="+" style="font-size:36px;line-height:1;font-weight:400;color:#14140f;font-variant-numeric:lining-nums tabular-nums">100+</span>
+</div>
+
+<div style="display:flex;align-items:baseline;justify-content:space-between;gap:40px;padding:30px 0;border-bottom:1px solid #e2e0d7">
+<span style="font-size:22px;color:#14140f">Companies hired with us</span>
+<span data-count-to="75" style="font-size:36px;line-height:1;font-weight:400;color:#14140f;font-variant-numeric:lining-nums tabular-nums">75</span>
+</div>
+
+<div style="display:flex;align-items:baseline;justify-content:space-between;gap:40px;padding:30px 0;border-bottom:1px solid #e2e0d7">
+<span style="font-size:22px;color:#14140f">Y&nbsp;Combinator companies</span>
+<span data-count-to="30" style="font-size:36px;line-height:1;font-weight:400;color:#14140f;font-variant-numeric:lining-nums tabular-nums">30</span>
+</div>
+
+<div style="display:flex;align-items:baseline;justify-content:space-between;gap:40px;padding:30px 0;border-bottom:1px solid #e2e0d7">
+<span style="font-size:22px;color:#14140f">Recruiters in the network</span>
+<span data-count-to="1000" data-count-suffix="+" style="font-size:36px;line-height:1;font-weight:400;color:#14140f;font-variant-numeric:lining-nums tabular-nums">1,000+</span>
+</div>
+
+<div style="display:flex;align-items:baseline;justify-content:space-between;gap:40px;padding:30px 0;border-bottom:1px solid #e2e0d7">
+<span style="font-size:22px;color:#14140f">Paid out in bounties</span>
+<span style="font-size:36px;line-height:1;font-weight:400;color:#14140f;font-variant-numeric:lining-nums tabular-nums">Seven figures</span>
+</div>
+</div>
+<p style="font-size:17px;line-height:1.7;color:#45443c;max-width:620px;margin-top:44px;text-wrap:pretty">Every placement was paid on outcome. Every bounty was earned by a recruiter who knew their market cold. Nothing here was billed by the hour.</p>
+</div>
+</section>
+
+<section id="companies" data-screen-label="Companies" style="background:#fbfaf6;padding:0 0 84px">
+<div style="max-width:1180px;margin:0 auto;padding:0 40px">
+<p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#98958a;margin-bottom:20px">Companies</p>
+<h2 style="font-size:40px;line-height:1.14;font-weight:400;letter-spacing:-0.012em;color:#14140f;max-width:720px;margin-bottom:16px;text-wrap:balance">Hired with teams building what&rsquo;s next.</h2>
+<p style="font-size:18px;line-height:1.7;color:#45443c;max-width:640px;margin-bottom:40px;text-wrap:pretty">From startups to healthcare to hardware — a sample of the companies that ran hiring on SeekLab.</p>
+<div class="sl-logo-grid">
+<div style="display:flex;align-items:center;justify-content:center;min-height:72px;padding:18px 16px;border:1px solid #e2e0d7;background:#ffffff"><img src="assets/logos/ec.png" alt="EC" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></div>
+<div style="display:flex;align-items:center;justify-content:center;min-height:72px;padding:18px 16px;border:1px solid #e2e0d7;background:#ffffff"><img src="assets/logos/mission-healthcare.png" alt="Mission Healthcare" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></div>
+<div style="display:flex;align-items:center;justify-content:center;min-height:72px;padding:18px 16px;border:1px solid #e2e0d7;background:#ffffff"><img src="assets/logos/cleana.png" alt="Cleana" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></div>
+<div style="display:flex;align-items:center;justify-content:center;min-height:72px;padding:18px 16px;border:1px solid #e2e0d7;background:#ffffff"><img src="assets/logos/rok.png" alt="ROK" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></div>
+<div style="display:flex;align-items:center;justify-content:center;min-height:72px;padding:18px 16px;border:1px solid #e2e0d7;background:#ffffff"><img src="assets/logos/topsort.png" alt="TopSort" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></div>
+<div style="display:flex;align-items:center;justify-content:center;min-height:72px;padding:18px 16px;border:1px solid #e2e0d7;background:#ffffff"><img src="assets/logos/vibrantcare.png" alt="VibrantCare" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></div>
+<div style="display:flex;align-items:center;justify-content:center;min-height:72px;padding:18px 16px;border:1px solid #e2e0d7;background:#ffffff"><img src="assets/logos/entwistle.png" alt="Entwistle" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></div>
+<div style="display:flex;align-items:center;justify-content:center;min-height:72px;padding:18px 16px;border:1px solid #e2e0d7;background:#ffffff"><img src="assets/logos/aps.png" alt="AP&S" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></div>
+<div style="display:flex;align-items:center;justify-content:center;min-height:72px;padding:18px 16px;border:1px solid #e2e0d7;background:#ffffff"><img src="assets/logos/securifens.png" alt="Securifens" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></div>
+<div style="display:flex;align-items:center;justify-content:center;min-height:72px;padding:18px 16px;border:1px solid #e2e0d7;background:#ffffff"><img src="assets/logos/tempus.png" alt="Tempus" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></div>
+<div style="display:flex;align-items:center;justify-content:center;min-height:72px;padding:18px 16px;border:1px solid #e2e0d7;background:#ffffff"><img src="assets/logos/viacore.png" alt="Viacore" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></div>
+<div style="display:flex;align-items:center;justify-content:center;min-height:72px;padding:18px 16px;border:1px solid #e2e0d7;background:#ffffff"><img src="assets/logos/ibi.png" alt="IBI" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></div>
+</div>
+</div>
+</section>
+
+<section id="built" data-screen-label="What we built" style="background:#fbfaf6;padding:0 0 84px">
+<div style="max-width:1180px;margin:0 auto;padding:0 40px;margin-bottom:34px">
+<p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#98958a;margin-bottom:20px">The product</p>
+<h2 style="font-size:40px;line-height:1.16;font-weight:400;letter-spacing:-0.012em;color:#14140f;max-width:820px;margin-bottom:24px;text-wrap:balance">A full recruiting operating system, built by three people.</h2>
+<p style="font-size:18px;line-height:1.7;color:#45443c;max-width:720px;text-wrap:pretty">Bounty posting, AI candidate matching, submission verification, a shared pipeline, and payouts — one platform. Everything below is the real interface, running on sample data.</p>
+</div>
+
+<div style="max-width:1180px;margin:0 auto 28px;padding:0 40px;display:flex;flex-wrap:wrap;gap:0;border-top:1px solid #e2e0d7;border-bottom:1px solid #e2e0d7">
+<button sc-camel-on-click="{{ goOverview }}" style="{{ tabOverview }}">Dashboard overview</button>
+<button sc-camel-on-click="{{ goPipeline }}" style="{{ tabPipeline }}">Pipeline board</button>
+<button sc-camel-on-click="{{ goBounties }}" style="{{ tabBounties }}">Bounty marketplace</button>
+<button sc-camel-on-click="{{ goDetails }}" style="{{ tabDetails }}">Bounty details</button>
+<button sc-camel-on-click="{{ goPost }}" style="{{ tabPost }}">Post a role</button>
+<button sc-camel-on-click="{{ goSubmit }}" style="{{ tabSubmit }}">Candidate submission</button>
+<button sc-camel-on-click="{{ goMessaging }}" style="{{ tabMessaging }}">Messaging</button>
+<button sc-camel-on-click="{{ goCandidates }}" style="{{ tabCandidates }}">Candidate table</button>
+<button sc-camel-on-click="{{ goMatches }}" style="{{ tabMatches }}">AI matching</button>
+</div>
+
+<div style="max-width:1180px;margin:0 auto;padding:0 40px">
+<p style="margin:0 0 24px;font-size:17px;line-height:1.7;color:#45443c;max-width:820px;text-wrap:pretty">{{ paneCaption }}</p>
+<div data-app-frame="1" style="font-family:Roboto,system-ui,sans-serif;position:relative;width:100%;overflow:hidden;border-radius:0;background:#ffffff;border:1px solid #14140f">
+<div data-app-inner="1" style="width:1440px;transform-origin:top left;background:#ffffff;font-family:Roboto,system-ui,sans-serif">
+<sc-if value="{{ showChrome }}" hint-placeholder-val="{{ true }}">
+<div style="height:44px;display:flex;align-items:center;gap:8px;padding:0 16px;background:#f8fafc;border-bottom:1px solid #e2e8f0">
+<span style="width:11px;height:11px;border-radius:999px;background:#e2e8f0;display:block"></span>
+<span style="width:11px;height:11px;border-radius:999px;background:#e2e8f0;display:block"></span>
+<span style="width:11px;height:11px;border-radius:999px;background:#e2e8f0;display:block"></span>
+<div style="flex:1;display:flex;justify-content:center"><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#94a3b8;background:#ffffff;border:1px solid #e2e8f0;border-radius:6px;padding:4px 14px">app.theseeklab.com {{ chromePath }}</span></div>
+</div>
+</sc-if>
+
+<div style="display:flex;min-height:760px;background:#ffffff">
+<aside style="width:256px;flex-shrink:0;border-right:1px solid #e2e8f0;background:#ffffff;display:flex;flex-direction:column">
+<div style="height:64px;flex-shrink:0;display:flex;align-items:center;padding:0 24px;gap:8px"><img src="assets/seeklab-mark.png" alt="seeklab logo" style="width:40px;height:40px"><img src="assets/seeklab-wordmark.png" alt="SeekLab" style="width:94px;height:20px"></div>
+<div style="flex:1;padding:24px">
+<div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:4px">
+<div style="flex:1;min-width:0;display:flex;align-items:flex-start;gap:12px;padding:12px 16px;color:#475569">
+<svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="flex-shrink:0"><path d="M12 3l1.9 5.8H20l-4.7 3.4 1.8 5.8-4.7-3.6-4.7 3.6 1.8-5.8L4 8.8h6.1z"></path></svg>
+<span style="min-width:0;flex:1;font-size:14px;font-weight:600;line-height:1.2;display:flex;flex-direction:column;color:#475569"><span>Recruiter</span><span>Marketplace</span></span>
+</div>
+<span style="padding:8px;display:flex;align-items:center;color:#020617"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M9 3v18"></path></svg></span>
+</div>
+<div style="margin-left:32px;display:flex;flex-direction:column;gap:4px">
+<div style="{{ navOverview }}"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="flex-shrink:0"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Overview</div>
+<div style="{{ navBounties }}"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="flex-shrink:0"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path></svg>Open Roles</div>
+<div style="{{ navPipeline }}"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="flex-shrink:0"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path></svg>Candidates</div>
+<div style="{{ navMessaging }}"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="flex-shrink:0"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9 9 0 0 1-4.2-1L3 20l1.1-4.6A8.4 8.4 0 0 1 3 11.5 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5z"></path></svg>Messages</div>
+<div style="{{ navMatches }}"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="flex-shrink:0"><path d="M13 3l2.2 5.8L21 11l-5.8 2.2L13 19l-2.2-5.8L5 11l5.8-2.2z"></path><path d="M5 3v3M3.5 4.5h3M18 17v3M16.5 18.5h3"></path></svg>AI Matches</div>
+</div>
+</div>
+<div style="flex-shrink:0;border-top:1px solid rgba(226,232,240,0.2);padding:24px 24px 32px;display:flex;flex-direction:column;gap:4px">
+<div style="display:flex;align-items:center;gap:12px;padding:8px 16px;border-radius:8px;font-size:14px;color:#64748b"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="flex-shrink:0"><path d="M11 17l-5-5 5-5M6 12h12"></path></svg>Refer Recruiter</div>
+<div style="display:flex;align-items:center;gap:12px;padding:8px 16px;border-radius:8px;font-size:14px;color:#64748b"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="flex-shrink:0"><rect x="4" y="2" width="16" height="20" rx="2"></rect><path d="M9 22v-4h6v4"></path></svg>Refer a Client</div>
+<div style="display:flex;align-items:center;gap:12px;padding:8px 16px;border-radius:8px;font-size:14px;color:#64748b"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="flex-shrink:0"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>Join Discord</div>
+</div>
+</aside>
+
+<div style="flex:1;min-width:0;display:flex;flex-direction:column">
+<div style="height:64px;flex-shrink:0;border-bottom:1px solid #e2e8f0;display:flex;align-items:center;justify-content:space-between;padding:0 24px;gap:8px">
+<h3 style="font-size:18px;font-weight:600;color:#020617">{{ paneTitle }}</h3>
+<div style="display:flex;align-items:center;gap:16px">
+<span style="position:relative;display:flex;align-items:center;color:#475569"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.7 21a2 2 0 0 1-3.4 0"></path></svg><span style="position:absolute;top:-2px;right:-4px;min-width:16px;height:16px;padding:0 4px;border-radius:999px;background:#dc2626;color:#ffffff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center">3</span></span>
+<span style="display:flex;align-items:center;gap:8px"><span style="width:32px;height:32px;border-radius:999px;background:#e2e8f0;color:#475569;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600">AR</span><svg width="14" height="14" sc-camel-view-box="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><path d="M6 9l6 6 6-6"></path></svg></span>
+</div>
+</div>
+
+<div style="flex:1;min-width:0;overflow:hidden;padding:24px;background:#ffffff">
+
+<sc-if value="{{ isOverview }}" hint-placeholder-val="{{ true }}">
+<div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:24px">
+<div style="border:1px solid #e2e8f0;border-radius:8px;background:#ffffff;box-shadow:0 1px 2px 0 rgba(0,0,0,0.05);padding:24px;display:flex;align-items:center;justify-content:space-between;gap:12px">
+<div><p style="font-size:14px;font-weight:500;color:#64748b;margin-bottom:2px">Total Active Candidates</p><p style="font-size:24px;font-weight:700;color:#020617">42</p></div>
+<svg width="32" height="32" sc-camel-view-box="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+</div>
+<div style="border:1px solid #e2e8f0;border-radius:8px;background:#ffffff;box-shadow:0 1px 2px 0 rgba(0,0,0,0.05);padding:24px;display:flex;align-items:center;justify-content:space-between;gap:12px">
+<div><p style="font-size:14px;font-weight:500;color:#64748b;margin-bottom:2px">Working Roles</p><p style="font-size:24px;font-weight:700;color:#020617">18</p></div>
+<svg width="32" height="32" sc-camel-view-box="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg>
+</div>
+<div style="border:1px solid #e2e8f0;border-radius:8px;background:#ffffff;box-shadow:0 1px 2px 0 rgba(0,0,0,0.05);padding:24px;display:flex;align-items:center;justify-content:space-between;gap:12px">
+<div><p style="font-size:14px;font-weight:500;color:#64748b;margin-bottom:2px">Scheduled Interviews</p><p style="font-size:24px;font-weight:700;color:#020617">7</p></div>
+<svg width="32" height="32" sc-camel-view-box="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+<div style="border:1px solid #e2e8f0;border-radius:8px;background:#ffffff;box-shadow:0 1px 2px 0 rgba(0,0,0,0.05)">
+<div style="padding:24px 24px 16px"><h4 style="font-size:20px;font-weight:600;letter-spacing:-0.01em;color:#020617;margin-bottom:6px">Pipeline Breakdown</h4><p style="font-size:14px;color:#64748b">Detailed candidate progression through each stage</p></div>
+<div style="padding:0 24px 24px;display:flex;flex-direction:column;gap:24px">
+<div style="display:flex;flex-direction:column;gap:12px"><div style="display:flex;align-items:center;justify-content:space-between"><div style="display:flex;align-items:center;gap:12px"><span style="width:16px;height:16px;border-radius:999px;background:#f59e0b;display:block"></span><span style="font-size:14px;font-weight:600;color:#020617">Pending Confirmation</span></div><div style="display:flex;align-items:center;gap:16px"><span style="font-size:14px;font-weight:500;color:#64748b">4</span><span style="font-size:14px;font-weight:600;color:#020617">10%</span></div></div><div style="width:100%;height:6px;border-radius:999px;background:rgba(241,245,249,0.9)"><div style="width:10%;height:6px;border-radius:999px;background:#020617"></div></div></div>
+<div style="display:flex;flex-direction:column;gap:12px"><div style="display:flex;align-items:center;justify-content:space-between"><div style="display:flex;align-items:center;gap:12px"><span style="width:16px;height:16px;border-radius:999px;background:#94a3b8;display:block"></span><span style="font-size:14px;font-weight:600;color:#020617">New</span></div><div style="display:flex;align-items:center;gap:16px"><span style="font-size:14px;font-weight:500;color:#64748b">11</span><span style="font-size:14px;font-weight:600;color:#020617">26%</span></div></div><div style="width:100%;height:6px;border-radius:999px;background:rgba(241,245,249,0.9)"><div style="width:26%;height:6px;border-radius:999px;background:#020617"></div></div></div>
+<div style="display:flex;flex-direction:column;gap:12px"><div style="display:flex;align-items:center;justify-content:space-between"><div style="display:flex;align-items:center;gap:12px"><span style="width:16px;height:16px;border-radius:999px;background:#3b82f6;display:block"></span><span style="font-size:14px;font-weight:600;color:#020617">In Review</span></div><div style="display:flex;align-items:center;gap:16px"><span style="font-size:14px;font-weight:500;color:#64748b">9</span><span style="font-size:14px;font-weight:600;color:#020617">21%</span></div></div><div style="width:100%;height:6px;border-radius:999px;background:rgba(241,245,249,0.9)"><div style="width:21%;height:6px;border-radius:999px;background:#020617"></div></div></div>
+<div style="display:flex;flex-direction:column;gap:12px"><div style="display:flex;align-items:center;justify-content:space-between"><div style="display:flex;align-items:center;gap:12px"><span style="width:16px;height:16px;border-radius:999px;background:#6366f1;display:block"></span><span style="font-size:14px;font-weight:600;color:#020617">Interviewing</span></div><div style="display:flex;align-items:center;gap:16px"><span style="font-size:14px;font-weight:500;color:#64748b">8</span><span style="font-size:14px;font-weight:600;color:#020617">19%</span></div></div><div style="width:100%;height:6px;border-radius:999px;background:rgba(241,245,249,0.9)"><div style="width:19%;height:6px;border-radius:999px;background:#020617"></div></div></div>
+<div style="display:flex;flex-direction:column;gap:12px"><div style="display:flex;align-items:center;justify-content:space-between"><div style="display:flex;align-items:center;gap:12px"><span style="width:16px;height:16px;border-radius:999px;background:#8b5cf6;display:block"></span><span style="font-size:14px;font-weight:600;color:#020617">Final Interview</span></div><div style="display:flex;align-items:center;gap:16px"><span style="font-size:14px;font-weight:500;color:#64748b">5</span><span style="font-size:14px;font-weight:600;color:#020617">12%</span></div></div><div style="width:100%;height:6px;border-radius:999px;background:rgba(241,245,249,0.9)"><div style="width:12%;height:6px;border-radius:999px;background:#020617"></div></div></div>
+<div style="display:flex;flex-direction:column;gap:12px"><div style="display:flex;align-items:center;justify-content:space-between"><div style="display:flex;align-items:center;gap:12px"><span style="width:16px;height:16px;border-radius:999px;background:#0d9488;display:block"></span><span style="font-size:14px;font-weight:600;color:#020617">Offer Letter Sent</span></div><div style="display:flex;align-items:center;gap:16px"><span style="font-size:14px;font-weight:500;color:#64748b">3</span><span style="font-size:14px;font-weight:600;color:#020617">7%</span></div></div><div style="width:100%;height:6px;border-radius:999px;background:rgba(241,245,249,0.9)"><div style="width:7%;height:6px;border-radius:999px;background:#020617"></div></div></div>
+<div style="display:flex;flex-direction:column;gap:12px"><div style="display:flex;align-items:center;justify-content:space-between"><div style="display:flex;align-items:center;gap:12px"><span style="width:16px;height:16px;border-radius:999px;background:#22c55e;display:block"></span><span style="font-size:14px;font-weight:600;color:#020617">Hired</span></div><div style="display:flex;align-items:center;gap:16px"><span style="font-size:14px;font-weight:500;color:#64748b">2</span><span style="font-size:14px;font-weight:600;color:#020617">5%</span></div></div><div style="width:100%;height:6px;border-radius:999px;background:rgba(241,245,249,0.9)"><div style="width:5%;height:6px;border-radius:999px;background:#020617"></div></div></div>
+</div>
+</div>
+
+<div style="border:1px solid #e2e8f0;border-radius:8px;background:#ffffff;box-shadow:0 1px 2px 0 rgba(0,0,0,0.05)">
+<div style="padding:24px 24px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px">
+<div><h4 style="font-size:20px;font-weight:600;letter-spacing:-0.01em;color:#020617;margin-bottom:6px">Recent Candidates</h4><p style="font-size:14px;color:#64748b">Latest candidate activity and progress</p></div>
+<span style="display:inline-flex;align-items:center;gap:8px;height:36px;padding:0 12px;border:1px solid #e2e8f0;border-radius:6px;font-size:14px;font-weight:500;color:#020617">View All</span>
+</div>
+<div style="padding:0 24px 24px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;align-items:center;gap:12px;padding:12px;border:1px solid #e2e8f0;border-radius:12px" style-hover="background:#f8fafc">
+<div style="width:48px;height:48px;border-radius:999px;background:#e2e8f0;color:#475569;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:600;flex-shrink:0">MR</div>
+<div style="flex:1;min-width:0">
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:2px"><h5 style="font-size:14px;font-weight:600;color:#020617">Maya Robins</h5><span style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:500;color:#64748b">★ 4.6</span></div>
+<p style="font-size:12px;color:#64748b;margin-bottom:6px">Senior Backend Engineer @ Northlake Labs</p>
+<div style="display:flex;align-items:center;gap:12px"><span style="font-size:12px;color:#64748b">3h ago</span><span style="display:inline-flex;align-items:center;border-radius:999px;padding:2px 8px;font-size:12px;font-weight:500;background:#eef2ff;color:#4338ca;border:1px solid #c7d2fe">Interviewing</span></div>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:12px;padding:12px;border:1px solid #e2e8f0;border-radius:12px" style-hover="background:#f8fafc">
+<div style="width:48px;height:48px;border-radius:999px;background:#e2e8f0;color:#475569;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:600;flex-shrink:0">DO</div>
+<div style="flex:1;min-width:0">
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:2px"><h5 style="font-size:14px;font-weight:600;color:#020617">Devin Osei</h5><span style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:500;color:#64748b">★ 4.2</span></div>
+<p style="font-size:12px;color:#64748b;margin-bottom:6px">Product Designer @ Fernwood</p>
+<div style="display:flex;align-items:center;gap:12px"><span style="font-size:12px;color:#64748b">Yesterday</span><span style="display:inline-flex;align-items:center;border-radius:999px;padding:2px 8px;font-size:12px;font-weight:500;background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe">In Review</span></div>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:12px;padding:12px;border:1px solid #e2e8f0;border-radius:12px" style-hover="background:#f8fafc">
+<div style="width:48px;height:48px;border-radius:999px;background:#e2e8f0;color:#475569;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:600;flex-shrink:0">SK</div>
+<div style="flex:1;min-width:0">
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:2px"><h5 style="font-size:14px;font-weight:600;color:#020617">Sana Khouri</h5><span style="display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:500;color:#64748b">★ 4.9</span></div>
+<p style="font-size:12px;color:#64748b;margin-bottom:6px">Staff Data Engineer @ Ardent Health</p>
+<div style="display:flex;align-items:center;gap:12px"><span style="font-size:12px;color:#64748b">2 days ago</span><span style="display:inline-flex;align-items:center;border-radius:999px;padding:2px 8px;font-size:12px;font-weight:500;background:#f0fdfa;color:#115e59;border:1px solid #5eead4">Offer Letter Sent</span></div>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:12px;padding:12px;border:1px solid #e2e8f0;border-radius:12px" style-hover="background:#f8fafc">
+<div style="width:48px;height:48px;border-radius:999px;background:#e2e8f0;color:#475569;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:600;flex-shrink:0">TP</div>
+<div style="flex:1;min-width:0">
+<div style="display:flex;align-items:center;gap:8px;margin-bottom:2px"><h5 style="font-size:14px;font-weight:600;color:#020617">Tomas Pike</h5></div>
+<p style="font-size:12px;color:#64748b;margin-bottom:6px">Physical Therapist @ Cascade Care</p>
+<div style="display:flex;align-items:center;gap:12px"><span style="font-size:12px;color:#64748b">4 days ago</span><span style="display:inline-flex;align-items:center;border-radius:999px;padding:2px 8px;font-size:12px;font-weight:500;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0">Hired</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isPipeline }}" hint-placeholder-val="{{ true }}">
+<div style="display:flex;gap:16px;overflow-x:auto;padding-bottom:8px;height:100%">
+<div style="flex-shrink:0;width:288px;background:#f8fafc;border:2px solid #e2e8f0;border-radius:12px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,0.04)">
+<div style="background:#f1f5f9;padding:16px;border-bottom:1px solid #e2e8f0">
+<div style="display:flex;align-items:center;justify-content:space-between"><h5 style="font-size:12px;font-weight:700;color:#334155;letter-spacing:0.03em">New</h5><span style="display:inline-flex;align-items:center;border-radius:999px;padding:4px 8px;font-size:12px;font-weight:600;background:rgba(255,255,255,0.8);color:#334155;border:1px solid rgba(255,255,255,0.5)">2</span></div>
+<div style="margin-top:12px"><div style="font-size:14px;font-weight:500;color:#475569">$48,000</div><div style="font-size:12px;color:#64748b;margin-top:4px">Pipeline Value</div></div>
+</div>
+<div style="flex:1;padding:16px;display:flex;flex-direction:column;gap:12px">
+<div style="background:#ffffff;border:1px solid rgba(255,255,255,0.8);border-radius:8px;padding:16px;box-shadow:0 1px 2px rgba(0,0,0,0.05)">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:8px"><div style="width:32px;height:32px;border-radius:999px;background:#e2e8f0;color:#475569;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600">RA</div><h5 style="font-size:14px;font-weight:600;color:#0f172a">Rosa Almeida</h5></div>
+<p style="font-size:14px;font-weight:500;color:#475569;margin-bottom:4px">Senior Backend Engineer</p>
+<p style="font-size:12px;color:#64748b;margin-bottom:12px">Fernwood</p>
+<div style="display:flex;flex-direction:column;gap:8px;margin-bottom:12px">
+<div><div style="font-size:12px;color:#64748b;margin-bottom:4px">Est. Commission</div><div style="font-size:12px;font-weight:500;color:#475569;padding-left:20px">$24,000</div></div>
+<div><div style="font-size:12px;color:#64748b;margin-bottom:4px">Date Submitted</div><div style="font-size:12px;color:#475569;padding-left:20px">Mar 4, 2026</div></div>
+</div>
+<div style="display:flex;justify-content:flex-end;gap:4px"><span style="font-size:12px;color:#2563eb;padding:4px 8px">Interview</span><span style="font-size:12px;color:#dc2626;padding:4px 8px">Reject</span></div>
+</div>
+<div style="background:#ffffff;border:1px solid rgba(255,255,255,0.8);border-radius:8px;padding:16px;box-shadow:0 1px 2px rgba(0,0,0,0.05)">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:8px"><div style="width:32px;height:32px;border-radius:999px;background:#e2e8f0;color:#475569;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600">JW</div><h5 style="font-size:14px;font-weight:600;color:#0f172a">Jonah Weiss</h5></div>
+<p style="font-size:14px;font-weight:500;color:#475569;margin-bottom:4px">Product Manager</p>
+<p style="font-size:12px;color:#64748b;margin-bottom:12px">Northlake Labs</p>
+<div style="display:flex;flex-direction:column;gap:8px"><div><div style="font-size:12px;color:#64748b;margin-bottom:4px">Est. Commission</div><div style="font-size:12px;font-weight:500;color:#475569;padding-left:20px">$24,000</div></div></div>
+</div>
+</div>
+</div>
+
+<div style="flex-shrink:0;width:288px;background:#eff6ff;border:2px solid #bfdbfe;border-radius:12px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,0.04)">
+<div style="background:#dbeafe;padding:16px;border-bottom:1px solid #bfdbfe">
+<div style="display:flex;align-items:center;justify-content:space-between"><h5 style="font-size:12px;font-weight:700;color:#334155;letter-spacing:0.03em">In Review</h5><div style="display:flex;gap:8px"><span style="display:inline-flex;align-items:center;border-radius:999px;padding:4px 8px;font-size:12px;font-weight:600;background:rgba(255,255,255,0.8);color:#334155;border:1px solid rgba(255,255,255,0.5)">1</span><span style="display:inline-flex;align-items:center;border-radius:999px;padding:4px 8px;font-size:12px;font-weight:600;background:#3b82f6;color:#ffffff">1 new</span></div></div>
+<div style="margin-top:12px"><div style="font-size:14px;font-weight:500;color:#475569">$31,500</div><div style="font-size:12px;color:#64748b;margin-top:4px">Pipeline Value</div></div>
+</div>
+<div style="flex:1;padding:16px">
+<div style="background:#ffffff;border:1px solid rgba(255,255,255,0.8);border-radius:8px;padding:16px;box-shadow:0 1px 2px rgba(0,0,0,0.05);position:relative">
+<span style="position:absolute;top:12px;right:12px;padding:2px 8px;font-size:10px;font-weight:700;border-radius:999px;background:#3b82f6;color:#ffffff;letter-spacing:0.04em">NEW</span>
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:8px"><div style="width:32px;height:32px;border-radius:999px;background:#e2e8f0;color:#475569;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600">MR</div><h5 style="font-size:14px;font-weight:600;color:#0f172a">Maya Robins</h5></div>
+<p style="font-size:14px;font-weight:500;color:#475569;margin-bottom:4px">Senior Backend Engineer</p>
+<p style="font-size:12px;color:#64748b;margin-bottom:12px">Northlake Labs</p>
+<div style="display:flex;flex-direction:column;gap:8px"><div><div style="font-size:12px;color:#64748b;margin-bottom:4px">Est. Commission</div><div style="font-size:12px;font-weight:500;color:#475569;padding-left:20px">$31,500</div></div></div>
+</div>
+</div>
+</div>
+
+<div style="flex-shrink:0;width:288px;background:#eef2ff;border:2px solid #c7d2fe;border-radius:12px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,0.04)">
+<div style="background:#e0e7ff;padding:16px;border-bottom:1px solid #c7d2fe">
+<div style="display:flex;align-items:center;justify-content:space-between"><h5 style="font-size:12px;font-weight:700;color:#334155;letter-spacing:0.03em">Interviewing</h5><span style="display:inline-flex;align-items:center;border-radius:999px;padding:4px 8px;font-size:12px;font-weight:600;background:rgba(255,255,255,0.8);color:#334155;border:1px solid rgba(255,255,255,0.5)">1</span></div>
+<div style="margin-top:12px"><div style="font-size:14px;font-weight:500;color:#475569">$28,000</div><div style="font-size:12px;color:#64748b;margin-top:4px">Pipeline Value</div></div>
+</div>
+<div style="flex:1;padding:16px">
+<div style="background:#ffffff;border:1px solid rgba(255,255,255,0.8);border-radius:8px;padding:16px;box-shadow:0 1px 2px rgba(0,0,0,0.05)">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:8px"><div style="width:32px;height:32px;border-radius:999px;background:#e2e8f0;color:#475569;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600">DO</div><h5 style="font-size:14px;font-weight:600;color:#0f172a">Devin Osei</h5></div>
+<p style="font-size:14px;font-weight:500;color:#475569;margin-bottom:4px">Product Designer</p>
+<p style="font-size:12px;color:#64748b;margin-bottom:12px">Fernwood</p>
+<div style="display:flex;flex-direction:column;gap:8px"><div><div style="font-size:12px;color:#64748b;margin-bottom:4px">Date Submitted</div><div style="font-size:12px;color:#475569;padding-left:20px">Feb 21, 2026</div></div></div>
+</div>
+</div>
+</div>
+
+<div style="flex-shrink:0;width:288px;background:#f0fdfa;border:2px solid #5eead4;border-radius:12px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,0.04)">
+<div style="background:#ccfbf1;padding:16px;border-bottom:1px solid #5eead4">
+<div style="display:flex;align-items:center;justify-content:space-between"><h5 style="font-size:12px;font-weight:700;color:#334155;letter-spacing:0.03em">Offer Letter Sent</h5><span style="display:inline-flex;align-items:center;border-radius:999px;padding:4px 8px;font-size:12px;font-weight:600;background:rgba(255,255,255,0.8);color:#334155;border:1px solid rgba(255,255,255,0.5)">1</span></div>
+<div style="margin-top:12px"><div style="font-size:14px;font-weight:500;color:#475569">$36,000</div><div style="font-size:12px;color:#64748b;margin-top:4px">Pipeline Value</div></div>
+</div>
+<div style="flex:1;padding:16px">
+<div style="background:#ffffff;border:1px solid rgba(255,255,255,0.8);border-radius:8px;padding:16px;box-shadow:0 1px 2px rgba(0,0,0,0.05)">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:8px"><div style="width:32px;height:32px;border-radius:999px;background:#e2e8f0;color:#475569;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600">SK</div><h5 style="font-size:14px;font-weight:600;color:#0f172a">Sana Khouri</h5></div>
+<p style="font-size:14px;font-weight:500;color:#475569;margin-bottom:4px">Staff Data Engineer</p>
+<p style="font-size:12px;color:#64748b;margin-bottom:12px">Ardent Health</p>
+<div style="display:flex;flex-direction:column;gap:8px"><div><div style="font-size:12px;color:#64748b;margin-bottom:4px">Est. Commission</div><div style="font-size:12px;font-weight:500;color:#475569;padding-left:20px">$36,000</div></div></div>
+</div>
+</div>
+</div>
+
+<div style="flex-shrink:0;width:288px;background:#f0fdf4;border:2px solid #bbf7d0;border-radius:12px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,0.04)">
+<div style="background:#dcfce7;padding:16px;border-bottom:1px solid #bbf7d0">
+<div style="display:flex;align-items:center;justify-content:space-between"><h5 style="font-size:12px;font-weight:700;color:#334155;letter-spacing:0.03em">Hired</h5><span style="display:inline-flex;align-items:center;border-radius:999px;padding:4px 8px;font-size:12px;font-weight:600;background:rgba(255,255,255,0.8);color:#334155;border:1px solid rgba(255,255,255,0.5)">1</span></div>
+<div style="margin-top:12px"><div style="font-size:14px;font-weight:500;color:#475569">$22,000</div><div style="font-size:12px;color:#64748b;margin-top:4px">Pipeline Value</div></div>
+</div>
+<div style="flex:1;padding:16px">
+<div style="background:#ffffff;border:1px solid rgba(255,255,255,0.8);border-radius:8px;padding:16px;box-shadow:0 1px 2px rgba(0,0,0,0.05)">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:8px"><div style="width:32px;height:32px;border-radius:999px;background:#e2e8f0;color:#475569;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600">TP</div><h5 style="font-size:14px;font-weight:600;color:#0f172a">Tomas Pike</h5></div>
+<p style="font-size:14px;font-weight:500;color:#475569;margin-bottom:4px">Physical Therapist</p>
+<p style="font-size:12px;color:#64748b;margin-bottom:12px">Cascade Care</p>
+<div style="display:flex;flex-direction:column;gap:8px"><div><div style="font-size:12px;color:#64748b;margin-bottom:4px">Date Submitted</div><div style="font-size:12px;color:#475569;padding-left:20px">Jan 9, 2026</div></div></div>
+</div>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isBounties }}" hint-placeholder-val="{{ true }}">
+<div style="max-width:820px;display:flex;flex-direction:column;gap:20px">
+<div style="border:1px solid #e2e8f0;border-left:4px solid #10b981;border-radius:8px;background:#ffffff;box-shadow:0 1px 2px rgba(0,0,0,0.05);overflow:hidden;position:relative">
+<div style="position:absolute;top:24px;right:24px;display:flex;gap:8px"><span style="display:inline-flex;align-items:center;border-radius:999px;padding:2px 10px;font-size:12px;font-weight:500;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0">Verified client</span><span style="display:inline-flex;align-items:center;border-radius:999px;padding:2px 10px;font-size:12px;font-weight:500;background:#fef2f2;color:#b91c1c;border:1px solid #fecaca">Urgent</span></div>
+<div style="display:flex;align-items:flex-start;gap:16px;padding:24px 24px 20px">
+<div style="width:64px;height:64px;border-radius:16px;border:2px solid #f1f5f9;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 1px 2px rgba(0,0,0,0.05)"><div style="width:100%;height:100%;border-radius:12px;background:#1e293b;color:#ffffff;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700">NL</div></div>
+<div style="flex:1;min-width:0;padding-right:220px">
+<h4 style="font-size:18px;font-weight:700;line-height:1.25;color:#020617;margin-bottom:4px">Senior Backend Engineer <span style="color:#64748b;font-weight:400">x 2 openings</span></h4>
+<div style="display:flex;align-items:center;gap:8px;color:#64748b"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"></rect><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M8 10h.01M16 10h.01M8 14h.01M16 14h.01"></path></svg><span style="font-size:14px;font-weight:500">Northlake Labs</span></div>
+</div>
+</div>
+<div style="background:#ecfdf5;border-top:1px solid #d1fae5;border-bottom:1px solid #d1fae5;padding:20px 24px;margin-bottom:24px">
+<div style="display:flex;align-items:baseline;gap:12px;margin-bottom:8px"><span style="font-size:30px;font-weight:700;letter-spacing:-0.02em;color:#047857">$31,500</span><span style="font-size:14px;font-weight:600;color:#059669;text-transform:uppercase;letter-spacing:0.05em">Est. Bounty</span></div>
+<div style="display:flex;align-items:center;gap:16px"><span style="font-size:14px;font-weight:500;color:rgba(4,120,87,0.9);padding:4px 10px;border-radius:6px;background:rgba(209,250,229,0.5)">18% of base</span><span style="font-size:14px;font-weight:500;color:rgba(4,120,87,0.9);padding:4px 10px;border-radius:6px;background:rgba(209,250,229,0.5)">90-day guarantee</span></div>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px 32px;padding:0 24px;margin-bottom:24px">
+<div><div style="display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:#64748b;margin-bottom:6px">Salary</div><div style="font-size:14px;font-weight:600;color:#020617">$160k – $185k</div></div>
+<div><div style="display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:#64748b;margin-bottom:6px">Type</div><div style="font-size:14px;font-weight:600;color:#020617">Full-time</div></div>
+<div><div style="display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;color:#64748b;margin-bottom:6px">Location</div><div style="font-size:14px;font-weight:600;color:#020617">Seattle, WA · Hybrid</div></div>
+</div>
+<div style="padding:0 24px 24px">
+<div style="display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-radius:12px;border:1px solid transparent" style-hover="background:#f8fafc;border-color:#e2e8f0"><span style="display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:#020617"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"></path></svg>Role Summary</span></div>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;border-top:1px solid #f1f5f9;background:rgba(248,250,252,0.3);padding:20px 24px">
+<div style="display:flex;align-items:center;gap:8px;font-size:12px;font-weight:500;color:#64748b"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg><span>Posted 3 days ago</span></div>
+<div style="display:flex;align-items:center;gap:8px">
+<span style="display:inline-flex;align-items:center;gap:8px;height:36px;padding:0 12px;border:1px solid rgba(15,23,42,0.2);border-radius:6px;font-size:14px;font-weight:500;color:#0f172a">Submit candidate</span>
+<span style="display:inline-flex;align-items:center;height:36px;padding:0 12px;border-radius:6px;background:#0f172a;color:#ffffff;font-size:14px;font-weight:500">Apply</span>
+<span style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;font-size:14px;font-weight:500;color:#0f172a">View Details ›</span>
+</div>
+</div>
+</div>
+
+<div style="border:1px solid #e2e8f0;border-left:4px solid #3b82f6;border-radius:8px;background:#ffffff;box-shadow:0 1px 2px rgba(0,0,0,0.05);overflow:hidden">
+<div style="display:flex;align-items:flex-start;gap:16px;padding:24px 24px 20px">
+<div style="width:64px;height:64px;border-radius:16px;border:2px solid #f1f5f9;display:flex;align-items:center;justify-content:center;flex-shrink:0"><div style="width:100%;height:100%;border-radius:12px;background:#475569;color:#ffffff;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700">CC</div></div>
+<div style="flex:1;min-width:0">
+<h4 style="font-size:18px;font-weight:700;line-height:1.25;color:#020617;margin-bottom:4px">Physical Therapist</h4>
+<div style="display:flex;align-items:center;gap:8px;color:#64748b"><span style="font-size:14px;font-weight:500">Cascade Care</span></div>
+</div>
+</div>
+<div style="background:#ecfdf5;border-top:1px solid #d1fae5;border-bottom:1px solid #d1fae5;padding:20px 24px">
+<div style="display:flex;align-items:baseline;gap:12px;margin-bottom:8px"><span style="font-size:30px;font-weight:700;letter-spacing:-0.02em;color:#047857">$14,000</span><span style="font-size:14px;font-weight:600;color:#059669;text-transform:uppercase;letter-spacing:0.05em">Est. Bounty</span></div>
+<div style="display:flex;align-items:center;gap:16px"><span style="font-size:14px;font-weight:500;color:rgba(4,120,87,0.9);padding:4px 10px;border-radius:6px;background:rgba(209,250,229,0.5)">15% of base</span><span style="font-size:14px;font-weight:500;color:rgba(4,120,87,0.9);padding:4px 10px;border-radius:6px;background:rgba(209,250,229,0.5)">60-day guarantee</span></div>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isDetails }}" hint-placeholder-val="{{ true }}">
+<div style="background:linear-gradient(to bottom right,#2563eb,#3b82f6);color:#ffffff;border-radius:16px;margin-bottom:32px;box-shadow:0 20px 25px -5px rgba(37,99,235,0.3);overflow:hidden">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:8px;padding:24px 32px 8px">
+<span style="display:flex;align-items:center;gap:8px;font-size:14px;font-weight:500;padding:8px 12px;border-radius:8px"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M11 18l-6-6 6-6"></path></svg>Back</span>
+<span style="display:flex;align-items:center;gap:8px;font-size:14px;font-weight:500;opacity:0.9"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12a9 9 0 1 1-3-6.7M21 3v6h-6"></path></svg><span><strong>Active for:</strong> 0w 3d 4hr</span></span>
+<span style="width:72px;flex-shrink:0"></span>
+</div>
+<div style="display:flex;align-items:flex-start;justify-content:space-between;gap:32px;padding:48px">
+<div style="flex:1;min-width:0">
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
+<span style="width:48px;height:48px;border-radius:8px;display:flex;align-items:center;justify-content:center;opacity:0.9;flex-shrink:0"><svg width="24" height="24" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="2" width="16" height="20" rx="2"></rect><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M8 10h.01M16 10h.01M8 14h.01M16 14h.01"></path></svg></span>
+<span style="font-size:30px;font-weight:600">Northlake Labs</span>
+</div>
+<h1 style="font-size:36px;font-weight:700;line-height:1.15;margin-bottom:24px">Senior Backend Engineer <span style="font-size:0.8em;font-weight:600;color:rgba(255,255,255,0.8)">x2</span></h1>
+<div style="display:flex;flex-wrap:wrap;gap:32px">
+<span style="display:flex;align-items:center;gap:8px;font-size:18px;color:rgba(255,255,255,0.9)"><svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Seattle, WA · Hybrid</span>
+<span style="display:flex;align-items:center;gap:8px;font-size:18px;color:rgba(255,255,255,0.9)"><svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path></svg>Full-time</span>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px;width:300px;flex-shrink:0">
+<div style="background:rgba(255,255,255,0.15);padding:14px;border-radius:12px;text-align:right"><div style="font-size:12px;opacity:0.9;margin-bottom:4px">Est. Fee</div><div style="font-size:16px;font-weight:700;line-height:1.35">$31,500<span style="font-size:12px;opacity:0.8;margin-left:4px">x2</span></div></div>
+<div style="background:rgba(255,255,255,0.15);padding:14px;border-radius:12px;text-align:right"><div style="font-size:12px;opacity:0.9;margin-bottom:4px">Salary Range</div><div style="font-size:16px;font-weight:700;line-height:1.35">$160,000 - $185,000 /year</div></div>
+<div style="background:rgba(255,255,255,0.15);padding:14px;border-radius:12px;text-align:right"><div style="font-size:12px;opacity:0.9;margin-bottom:4px">Contract</div><div style="font-size:16px;font-weight:700;line-height:1.35">18% of Salary, 90 day guarantee</div></div>
+</div>
+</div>
+<div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px;padding:0 48px 32px">
+<span style="display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 28px;border-radius:8px;background:rgba(255,255,255,0.2);border:2px solid rgba(255,255,255,0.3);font-size:16px;font-weight:600;color:#ffffff;min-width:220px"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 15v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"></path><path d="M12 3v10M8 9l4 4 4-4"></path></svg>Download Role PDF</span>
+<div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px">
+<div style="text-align:right"><small style="display:block;font-size:14px;color:rgba(255,255,255,0.8);margin:2px 0">Weekly Submissions: 3</small><small style="display:block;font-size:14px;color:rgba(255,255,255,0.8);margin:2px 0">Reset: 2d 6h</small></div>
+<div style="display:flex;align-items:center;gap:20px">
+<span style="display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 28px;border-radius:8px;background:rgba(255,255,255,0.2);border:2px solid rgba(255,255,255,0.3);font-size:16px;font-weight:600;color:#ffffff;min-width:220px"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"></path></svg>Copy Direct Apply Link</span>
+<span style="display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 32px;border-radius:8px;background:#ffffff;color:#2563eb;font-size:16px;font-weight:600;min-width:220px;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1)">Submit Candidate<svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</div>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:32px;align-items:start">
+<div>
+<div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;padding:32px;margin-bottom:32px;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1)">
+<h2 style="font-size:24px;font-weight:700;color:#1f2937;text-align:center;padding-bottom:12px;border-bottom:4px solid #2563eb;margin-bottom:24px">Job Details</h2>
+<div style="margin-bottom:32px">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #e5e7eb"><h3 style="font-size:18px;font-weight:600;color:#1f2937">Job Overview</h3></div>
+<div style="font-size:16px;line-height:1.7;color:#4b5563">Northlake Labs runs the ingestion layer for a fleet of clinical devices — roughly 40k events a second, on Go services behind a Kafka spine. You would own two of those services end to end, from schema to on-call.</div>
+</div>
+<div style="margin-bottom:32px">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #e5e7eb"><h3 style="font-size:18px;font-weight:600;color:#1f2937">Responsibilities</h3><div style="display:flex;align-items:center;gap:8px;flex-shrink:0"><label style="font-size:14px;color:#6b7280;white-space:nowrap">View as of:</label><span style="font-size:14px;border:1px solid #d1d5db;border-radius:6px;padding:4px 8px;background:#ffffff;color:#374151">Today</span></div></div>
+<div style="font-size:16px;line-height:1.7;color:#4b5563">Design and ship backend services in Go. Own reliability targets for the pipelines you build. Review peers’ designs and mentor two mid-level engineers.</div>
+</div>
+<div>
+<div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid #e5e7eb"><h3 style="font-size:18px;font-weight:600;color:#1f2937">Ideal Candidate</h3></div>
+<div style="font-size:16px;line-height:1.7;color:#4b5563">Someone who has carried a pager for a high-throughput system and can explain the last incident they caused.</div>
+</div>
+</div>
+
+<div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;padding:32px;margin-bottom:32px;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1)">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px"><h3 style="font-size:20px;font-weight:700;color:#1f2937;line-height:1.2">Must-Have Requirements</h3></div>
+<div style="display:flex;flex-direction:column;gap:20px">
+<div>
+<h3 style="font-size:14px;font-weight:600;color:#020617;letter-spacing:-0.01em;margin-bottom:8px">Experience</h3>
+<ul style="display:flex;flex-direction:column;gap:8px;margin:0;padding:0">
+<li style="border:1px solid #e2e8f0;border-radius:6px;background:#ffffff;padding:10px 12px;list-style:none"><div style="display:flex;align-items:flex-start;gap:12px"><div style="flex:1;min-width:0;display:flex;flex-wrap:wrap;align-items:flex-start;gap:4px 8px"><p style="font-size:14px;font-weight:500;line-height:1.35;color:#020617;flex:1;min-width:0">5+ years building backend services in Go, Java or Rust</p><span style="display:inline-flex;align-items:center;border-radius:999px;border:1px solid;padding:2px 8px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;background:#fef2f2;color:#991b1b;border-color:#fecaca">Required</span></div></div></li>
+<li style="border:1px solid #e2e8f0;border-radius:6px;background:#ffffff;padding:10px 12px;list-style:none"><div style="display:flex;align-items:flex-start;gap:12px"><div style="flex:1;min-width:0;display:flex;flex-wrap:wrap;align-items:flex-start;gap:4px 8px"><p style="font-size:14px;font-weight:500;line-height:1.35;color:#020617;flex:1;min-width:0">Owned a production service handling &gt;10k req/s</p><span style="display:inline-flex;align-items:center;border-radius:999px;border:1px solid;padding:2px 8px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;background:#fef2f2;color:#991b1b;border-color:#fecaca">Required</span></div></div></li>
+<li style="border:1px solid #e2e8f0;border-radius:6px;background:#ffffff;padding:10px 12px;list-style:none"><div style="display:flex;align-items:flex-start;gap:12px"><div style="flex:1;min-width:0;display:flex;flex-wrap:wrap;align-items:flex-start;gap:4px 8px"><p style="font-size:14px;font-weight:500;line-height:1.35;color:#020617;flex:1;min-width:0">Experience in a regulated or clinical data environment</p><span style="display:inline-flex;align-items:center;border-radius:999px;border:1px solid;padding:2px 8px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;background:#f0f9ff;color:#075985;border-color:#bae6fd">Nice to have</span></div></div></li>
+</ul>
+</div>
+<div>
+<h3 style="font-size:14px;font-weight:600;color:#020617;letter-spacing:-0.01em;margin-bottom:8px">Skills</h3>
+<ul style="display:flex;flex-direction:column;gap:8px;margin:0;padding:0">
+<li style="border:1px solid #e2e8f0;border-radius:6px;background:#ffffff;padding:10px 12px;list-style:none"><div style="display:flex;align-items:flex-start;gap:12px"><div style="flex:1;min-width:0;display:flex;flex-wrap:wrap;align-items:flex-start;gap:4px 8px"><p style="font-size:14px;font-weight:500;line-height:1.35;color:#020617;flex:1;min-width:0">Kafka or an equivalent streaming platform</p><span style="display:inline-flex;align-items:center;border-radius:999px;border:1px solid;padding:2px 8px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;background:#f1f5f9;color:#334155;border-color:#e2e8f0">Standard</span></div></div></li>
+<li style="border:1px solid #e2e8f0;border-radius:6px;background:#ffffff;padding:10px 12px;list-style:none"><div style="display:flex;align-items:flex-start;gap:12px"><div style="flex:1;min-width:0;display:flex;flex-wrap:wrap;align-items:flex-start;gap:4px 8px"><p style="font-size:14px;font-weight:500;line-height:1.35;color:#020617;flex:1;min-width:0">Kubernetes in production</p><span style="display:inline-flex;align-items:center;border-radius:999px;border:1px solid;padding:2px 8px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;background:#f0f9ff;color:#075985;border-color:#bae6fd">Nice to have</span></div></div></li>
+</ul>
+</div>
+<div>
+<h3 style="font-size:14px;font-weight:600;color:#020617;letter-spacing:-0.01em;margin-bottom:8px">Location</h3>
+<ul style="display:flex;flex-direction:column;gap:8px;margin:0;padding:0">
+<li style="border:1px solid #e2e8f0;border-radius:6px;background:#ffffff;padding:10px 12px;list-style:none"><div style="display:flex;align-items:flex-start;gap:12px"><div style="flex:1;min-width:0;display:flex;flex-wrap:wrap;align-items:flex-start;gap:4px 8px"><p style="font-size:14px;font-weight:500;line-height:1.35;color:#020617;flex:1;min-width:0">Able to work from Seattle two days a week</p><span style="display:inline-flex;align-items:center;border-radius:999px;border:1px solid;padding:2px 8px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;background:#fef2f2;color:#991b1b;border-color:#fecaca">Required</span></div></div></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;padding:32px;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1)">
+<h2 style="font-size:24px;font-weight:700;color:#1f2937;text-align:center;padding-bottom:12px;border-bottom:4px solid #2563eb;margin-bottom:24px">Screening Questions</h2>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:flex-start;gap:12px;padding:16px;background:#eff6ff;border-radius:8px;border-left:4px solid #2563eb"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.1 9a3 3 0 1 1 4.5 2.6c-.9.5-1.6 1-1.6 2.1M12 17h.01"></path></svg><span style="font-size:14px;font-weight:500;line-height:1.55;color:#1f2937">1. Describe the highest-throughput system you have personally owned.</span></div>
+<div style="display:flex;align-items:flex-start;gap:12px;padding:16px;background:#eff6ff;border-radius:8px;border-left:4px solid #2563eb"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.1 9a3 3 0 1 1 4.5 2.6c-.9.5-1.6 1-1.6 2.1M12 17h.01"></path></svg><span style="font-size:14px;font-weight:500;line-height:1.55;color:#1f2937">2. Are you able to be onsite in Seattle two days a week? <span style="margin-left:8px;font-size:12px;font-weight:400;color:#6b7280">(optional)</span></span></div>
+</div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:32px">
+<div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;padding:32px;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1)">
+<h3 style="font-size:20px;font-weight:700;color:#1f2937;margin-bottom:24px">Relocation &amp; Sponsorship</h3>
+<div style="display:flex;flex-wrap:wrap;gap:16px">
+<div style="display:flex;align-items:center;gap:12px;padding:8px 12px;background:#f0fdf4;border-left:4px solid #22c55e;border-radius:8px;flex:1;min-width:200px"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 12.5l2.5 2.5L16 9.5"></path></svg><span style="font-size:14px;font-weight:500;line-height:1.35;color:#1f2937">Relocation assistance</span></div>
+<div style="display:flex;align-items:center;gap:12px;padding:8px 12px;background:#fef2f2;border-left:4px solid #ef4444;border-radius:8px;flex:1;min-width:200px"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"></circle><path d="M15 9l-6 6M9 9l6 6"></path></svg><span style="font-size:14px;font-weight:500;line-height:1.35;color:#1f2937">Visa sponsorship</span></div>
+</div>
+</div>
+<div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;padding:32px;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1)">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px"><h3 style="font-size:20px;font-weight:700;color:#1f2937;line-height:1.2">Must-Have Requirements</h3></div>
+<ul style="display:flex;flex-direction:column;gap:8px;margin:0;padding:0">
+<li style="border:1px solid #e2e8f0;border-radius:6px;background:#ffffff;padding:10px 12px;list-style:none"><div style="display:flex;align-items:flex-start;gap:12px"><div style="flex:1;min-width:0;display:flex;flex-wrap:wrap;align-items:flex-start;gap:4px 8px"><p style="font-size:14px;font-weight:500;line-height:1.35;color:#020617;flex:1;min-width:0">5+ years backend in Go, Java or Rust</p><span style="display:inline-flex;align-items:center;border-radius:999px;border:1px solid;padding:2px 8px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;background:#fef2f2;color:#991b1b;border-color:#fecaca">Required</span></div></div></li>
+<li style="border:1px solid #e2e8f0;border-radius:6px;background:#ffffff;padding:10px 12px;list-style:none"><div style="display:flex;align-items:flex-start;gap:12px"><div style="flex:1;min-width:0;display:flex;flex-wrap:wrap;align-items:flex-start;gap:4px 8px"><p style="font-size:14px;font-weight:500;line-height:1.35;color:#020617;flex:1;min-width:0">Production service &gt;10k req/s</p><span style="display:inline-flex;align-items:center;border-radius:999px;border:1px solid;padding:2px 8px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;background:#fef2f2;color:#991b1b;border-color:#fecaca">Required</span></div></div></li>
+<li style="border:1px solid #e2e8f0;border-radius:6px;background:#ffffff;padding:10px 12px;list-style:none"><div style="display:flex;align-items:flex-start;gap:12px"><div style="flex:1;min-width:0;display:flex;flex-wrap:wrap;align-items:flex-start;gap:4px 8px"><p style="font-size:14px;font-weight:500;line-height:1.35;color:#020617;flex:1;min-width:0">Seattle, two days a week</p><span style="display:inline-flex;align-items:center;border-radius:999px;border:1px solid;padding:2px 8px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;background:#fef2f2;color:#991b1b;border-color:#fecaca">Required</span></div></div></li>
+</ul>
+</div>
+<div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:16px;padding:32px;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1)">
+<h3 style="font-size:20px;font-weight:700;color:#1f2937;margin-bottom:24px">Benefits</h3>
+<div style="display:flex;flex-direction:column;gap:16px">
+<div style="display:flex;align-items:center;gap:12px;padding:8px 12px;background:#f0fdf4;border-left:4px solid #22c55e;border-radius:8px"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 12.5l2.5 2.5L16 9.5"></path></svg><span style="font-size:14px;font-weight:500;line-height:1.35;color:#1f2937">Full medical, dental and vision</span></div>
+<div style="display:flex;align-items:center;gap:12px;padding:8px 12px;background:#f0fdf4;border-left:4px solid #22c55e;border-radius:8px"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 12.5l2.5 2.5L16 9.5"></path></svg><span style="font-size:14px;font-weight:500;line-height:1.35;color:#1f2937">Equity refresh at 24 months</span></div>
+<div style="display:flex;align-items:center;gap:12px;padding:8px 12px;background:#f0fdf4;border-left:4px solid #22c55e;border-radius:8px"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 12.5l2.5 2.5L16 9.5"></path></svg><span style="font-size:14px;font-weight:500;line-height:1.35;color:#1f2937">Unlimited PTO, 3-week minimum</span></div>
+</div>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isPost }}" hint-placeholder-val="{{ true }}">
+<div style="max-width:820px">
+<div style="display:flex;align-items:center;gap:4px;margin-bottom:28px">
+<span style="display:flex;align-items:center;gap:8px;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:500;background:#ecfdf5;color:#047857">✓ Getting Started</span>
+<span style="height:2px;flex:1;border-radius:999px;background:#10b981"></span>
+<span style="display:flex;align-items:center;gap:8px;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:500;background:#ecfdf5;color:#047857">✓ Role details</span>
+<span style="height:2px;flex:1;border-radius:999px;background:#10b981"></span>
+<span style="display:flex;align-items:center;gap:8px;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:500;background:#ecfdf5;color:#047857">✓ Requirements</span>
+<span style="height:2px;flex:1;border-radius:999px;background:#f1f5f9"></span>
+<span style="display:flex;align-items:center;gap:8px;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:500;background:#334155;color:#ffffff;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1),0 0 0 2px rgba(100,116,139,0.25)"><span style="width:16px;height:16px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700">4</span>Rate</span>
+</div>
+
+<div style="margin-bottom:24px">
+<h2 style="font-size:20px;font-weight:700;letter-spacing:-0.02em;color:#020617">What salary do you offer for this role?</h2>
+<p style="font-size:14px;color:#64748b;margin-top:4px">This information helps us match you with appropriate talent and calculate our service fee.</p>
+</div>
+
+<section style="border:1px solid #e2e8f0;border-left:3px solid rgba(96,165,250,0.5);border-radius:12px;background:#ffffff;padding:20px;box-shadow:0 1px 2px rgba(0,0,0,0.05);margin-bottom:24px"><div style="margin-bottom:16px"><h2 style="font-size:16px;font-weight:600;color:#020617">How would you like to specify the salary?</h2><p style="font-size:14px;color:#64748b;margin-top:4px">Choose how you’d like to specify the compensation for this full-time position</p></div><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px"><button type="button" style="display:flex;flex-direction:column;align-items:flex-start;gap:8px;border-radius:6px;padding:16px;text-align:left;background:rgba(239,246,255,0.6);border:1px solid #93c5fd;box-shadow:0 0 0 1px #bfdbfe;cursor:pointer"><span style="display:flex;align-items:center;gap:8px;color:#2563eb"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v20M17 6.5c0-1.9-2.2-3-5-3s-5 1.1-5 3 2.2 3 5 3.5 5 1.4 5 3.5-2.2 3-5 3-5-1.1-5-3"></path></svg><span style="font-size:14px;font-weight:600;color:#020617">Annual salary</span></span><span style="font-size:12px;color:#64748b;line-height:1.45">Specify the yearly salary for this position</span></button><button type="button" style="display:flex;flex-direction:column;align-items:flex-start;gap:8px;border-radius:6px;padding:16px;text-align:left;background:#ffffff;border:1px solid #e2e8f0;box-shadow:none;cursor:pointer"><span style="display:flex;align-items:center;gap:8px;color:#2563eb"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M8 3v4M16 3v4M3 11h18"></path></svg><span style="font-size:14px;font-weight:600;color:#020617">Monthly salary</span></span><span style="font-size:12px;color:#64748b;line-height:1.45">Specify the monthly salary for this position</span></button><button type="button" style="display:flex;flex-direction:column;align-items:flex-start;gap:8px;border-radius:6px;padding:16px;text-align:left;background:#ffffff;border:1px solid #e2e8f0;box-shadow:none;cursor:pointer"><span style="display:flex;align-items:center;gap:8px;color:#2563eb"><svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg><span style="font-size:14px;font-weight:600;color:#020617">Hourly rate</span></span><span style="font-size:12px;color:#64748b;line-height:1.45">Specify the hourly rate and expected hours per week</span></button></div></section>
+
+<section style="border:1px solid #e2e8f0;border-left:3px solid rgba(96,165,250,0.5);border-radius:12px;background:#ffffff;padding:20px;box-shadow:0 1px 2px rgba(0,0,0,0.05);margin-bottom:24px"><div style="margin-bottom:16px"><h2 style="font-size:16px;font-weight:600;color:#020617">Annual salary</h2><p style="font-size:14px;color:#64748b;margin-top:4px">Specify the yearly salary range you’re offering for this position</p></div>
+<div style="margin-bottom:16px;max-width:220px"><label style="display:block;font-size:14px;font-weight:500;color:#020617;margin-bottom:4px">Currency</label><div style="height:40px;border:1px solid #e2e8f0;border-radius:6px;padding:0 12px;display:flex;align-items:center;justify-content:space-between;font-size:14px;color:#020617;background:#ffffff">USD $ — US Dollar<svg width="14" height="14" sc-camel-view-box="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><path d="M6 9l6 6 6-6"></path></svg></div></div>
+<div style="display:flex;gap:16px"><div style="flex:1"><label style="display:block;font-size:14px;font-weight:500;color:#020617;margin-bottom:4px">From</label><div style="display:flex;align-items:center;height:40px;border:1px solid #e2e8f0;border-radius:6px;background:#ffffff;padding:0 12px;gap:4px"><span style="color:#64748b;font-size:14px">$</span><span style="flex:1;font-size:14px;color:#020617">160,000</span><span style="font-size:12px;color:#64748b;white-space:nowrap">/year</span></div></div><div style="flex:1"><label style="display:block;font-size:14px;font-weight:500;color:#020617;margin-bottom:4px">To</label><div style="display:flex;align-items:center;height:40px;border:1px solid #e2e8f0;border-radius:6px;background:#ffffff;padding:0 12px;gap:4px"><span style="color:#64748b;font-size:14px">$</span><span style="flex:1;font-size:14px;color:#020617">185,000</span><span style="font-size:12px;color:#64748b;white-space:nowrap">/year</span></div></div></div>
+<div style="margin-top:16px;border:1px solid #bfdbfe;border-radius:6px;background:#eff6ff;padding:16px;font-size:14px;color:#1e3a8a">
+<p style="font-weight:600">Monthly equivalent</p>
+<div style="margin-top:4px;display:flex;flex-direction:column;gap:4px"><p>The monthly salary equivalent would be:</p><p style="font-weight:600">$13,333 - $15,417 per month</p><p>SeekLab will use the annual salary range to calculate the service fee.</p></div>
+</div>
+<div style="margin-top:16px;padding-top:16px;border-top:1px solid #e2e8f0;display:flex;flex-direction:column;gap:6px">
+<label style="font-size:14px;font-weight:500;color:#020617">Additional salary details</label>
+<p style="font-size:12px;color:#64748b;line-height:1.5">Optionally add a note shown at the end of the salary (e.g. “plus equity”, “depending on experience”). This won’t change the service-fee calculation.</p>
+<div style="min-height:80px;width:100%;border:1px solid #e2e8f0;border-radius:6px;background:#ffffff;padding:8px 12px;font-size:14px;color:#020617">plus equity and annual performance bonus</div>
+</div>
+</section>
+
+<section style="border:1px solid #e2e8f0;border-left:3px solid rgba(96,165,250,0.5);border-radius:12px;background:#ffffff;padding:20px;box-shadow:0 1px 2px rgba(0,0,0,0.05);margin-bottom:24px"><div style="margin-bottom:16px"><h2 style="font-size:16px;font-weight:600;color:#020617">Select fee structure</h2><p style="font-size:14px;color:#64748b;margin-top:4px">Choose the fee structure and guarantee period for this position</p></div><div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px"><button type="button" style="display:flex;align-items:flex-start;gap:12px;border-radius:6px;padding:16px;text-align:left;background:rgba(239,246,255,0.6);border:1px solid #93c5fd;box-shadow:0 0 0 1px #bfdbfe;cursor:pointer"><span style="margin-top:4px;width:16px;height:16px;flex-shrink:0;border-radius:999px;border:1px solid #2563eb;background:#2563eb"></span><span style="min-width:0"><span style="display:block;font-size:14px;font-weight:500;color:#020617">18% of Salary, 90 day guarantee</span><span style="display:block;margin-top:2px;font-size:12px;color:#64748b">Fee calculated as percentage of annual salary</span></span></button><button type="button" style="display:flex;align-items:flex-start;gap:12px;border-radius:6px;padding:16px;text-align:left;background:#ffffff;border:1px solid #e2e8f0;box-shadow:none;cursor:pointer"><span style="margin-top:4px;width:16px;height:16px;flex-shrink:0;border-radius:999px;border:1px solid #94a3b8;background:transparent"></span><span style="min-width:0"><span style="display:block;font-size:14px;font-weight:500;color:#020617">15% of Salary, 60 day guarantee</span><span style="display:block;margin-top:2px;font-size:12px;color:#64748b">Fee calculated as percentage of annual salary</span></span></button></div></section>
+
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:20px;border-top:1px solid #e2e8f0">
+<span style="display:inline-flex;align-items:center;gap:6px;height:40px;padding:0 12px;font-size:15px;font-weight:500;color:#475569"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M11 18l-6-6 6-6"></path></svg>Back</span>
+<div style="display:flex;align-items:center;gap:12px">
+<span style="display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 12px;border:1px solid #e2e8f0;border-radius:6px;font-size:14px;font-weight:500;color:#475569;background:#ffffff">Save Draft</span>
+<span style="display:inline-flex;align-items:center;gap:6px;height:40px;padding:0 16px;border-radius:6px;background:#0f172a;color:#ffffff;font-size:15px;font-weight:500;box-shadow:0 1px 2px rgba(0,0,0,0.05)">Publish Role<svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isSubmit }}" hint-placeholder-val="{{ true }}">
+<div style="max-width:820px">
+<div style="display:flex;align-items:center;gap:4px;margin-bottom:28px"><span style="display:flex;align-items:center;gap:8px;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:500;background:#ecfdf5;color:#047857">✓ Upload</span><span style="height:2px;flex:1;border-radius:999px;background:#10b981"></span><span style="display:flex;align-items:center;gap:8px;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:500;background:#334155;color:#ffffff;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1),0 0 0 2px rgba(100,116,139,0.25)"><span style="width:16px;height:16px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700">2</span>Personal</span><span style="height:2px;flex:1;border-radius:999px;background:#f1f5f9"></span><span style="display:flex;align-items:center;gap:8px;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:500;background:#f1f5f9;color:#64748b;"><span style="width:16px;height:16px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700">3</span>Experience</span><span style="height:2px;flex:1;border-radius:999px;background:#f1f5f9"></span><span style="display:flex;align-items:center;gap:8px;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:500;background:#f1f5f9;color:#64748b;"><span style="width:16px;height:16px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700">4</span>Role Fit</span><span style="height:2px;flex:1;border-radius:999px;background:#f1f5f9"></span><span style="display:flex;align-items:center;gap:8px;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:500;background:#f1f5f9;color:#64748b;"><span style="width:16px;height:16px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700">5</span>Extras</span><span style="height:2px;flex:1;border-radius:999px;background:#f1f5f9"></span><span style="display:flex;align-items:center;gap:8px;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:500;background:#f1f5f9;color:#64748b;"><span style="width:16px;height:16px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700">6</span>Review</span></div>
+
+<div style="margin-bottom:20px">
+<h2 style="font-size:20px;font-weight:700;letter-spacing:-0.02em;color:#020617">Personal &amp; Profile Info</h2>
+<p style="font-size:15px;line-height:1.6;color:#64748b;margin-top:6px">Enter the candidate’s basic information. We’ll check for duplicates and blocked profiles as you go.</p>
+<div style="margin-top:12px;height:1px;background:linear-gradient(to right,rgba(96,165,250,0.4),rgba(147,197,253,0.15),transparent)"></div>
+</div>
+
+<section style="border:1px solid #e2e8f0;border-left:3px solid rgba(96,165,250,0.5);border-radius:12px;background:#ffffff;padding:24px;box-shadow:0 1px 2px rgba(0,0,0,0.05);margin-bottom:20px"><div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:20px"><div style="width:36px;height:36px;flex-shrink:0;border-radius:8px;background:#eff6ff;color:#2563eb;display:flex;align-items:center;justify-content:center"><svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"></circle><path d="M5 21v-1a7 7 0 0 1 14 0v1"></path></svg></div><div><h3 style="font-size:16px;font-weight:600;line-height:1.25;color:#020617">Contact Details</h3><p style="font-size:14px;color:#64748b;margin-top:2px">Primary identification and contact information</p></div></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px">
+<div><div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:6px"><label style="font-size:14px;font-weight:500;color:#020617">First Name</label><span style="display:inline-flex;align-items:center;gap:4px;border-radius:999px;border:1px solid rgba(147,197,253,0.5);background:rgba(239,246,255,0.7);padding:1px 7px;font-size:11px;font-weight:500;color:#1d4ed8"><svg width="10" height="10" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 3v4M3 5h4M6 17v4M4 19h4M13 3l2.5 6.5L22 12l-6.5 2.5L13 21l-2.5-6.5L4 12l6.5-2.5z"></path></svg>Auto-filled</span></div><div style="display:flex;align-items:center;gap:8px;height:40px;border:1px solid rgba(191,219,254,0.7);border-radius:6px;background:rgba(239,246,255,0.5);padding:0 12px"><span style="font-size:14px;color:#020617">Maya</span></div></div>
+<div><div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:6px"><label style="font-size:14px;font-weight:500;color:#020617">Last Name</label><span style="display:inline-flex;align-items:center;gap:4px;border-radius:999px;border:1px solid rgba(147,197,253,0.5);background:rgba(239,246,255,0.7);padding:1px 7px;font-size:11px;font-weight:500;color:#1d4ed8"><svg width="10" height="10" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 3v4M3 5h4M6 17v4M4 19h4M13 3l2.5 6.5L22 12l-6.5 2.5L13 21l-2.5-6.5L4 12l6.5-2.5z"></path></svg>Auto-filled</span></div><div style="display:flex;align-items:center;gap:8px;height:40px;border:1px solid rgba(191,219,254,0.7);border-radius:6px;background:rgba(239,246,255,0.5);padding:0 12px"><span style="font-size:14px;color:#020617">Robins</span></div></div>
+</div>
+<div style="display:flex;flex-direction:column;gap:20px">
+<div><div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:6px"><label style="font-size:14px;font-weight:500;color:#020617">Email</label><span style="display:inline-flex;align-items:center;gap:4px;border-radius:999px;border:1px solid rgba(147,197,253,0.5);background:rgba(239,246,255,0.7);padding:1px 7px;font-size:11px;font-weight:500;color:#1d4ed8"><svg width="10" height="10" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 3v4M3 5h4M6 17v4M4 19h4M13 3l2.5 6.5L22 12l-6.5 2.5L13 21l-2.5-6.5L4 12l6.5-2.5z"></path></svg>Auto-filled</span></div><div style="display:flex;align-items:center;gap:8px;height:40px;border:1px solid rgba(191,219,254,0.7);border-radius:6px;background:rgba(239,246,255,0.5);padding:0 12px"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="rgba(59,130,246,0.7)" stroke-width="2" stroke-linecap="round" style="flex-shrink:0"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m2 7 10 6 10-6"></path></svg><span style="font-size:14px;color:#020617">maya.robins@example.com</span></div><p style="font-size:13px;color:#64748b;margin-top:6px;line-height:1.5">The candidate will need to confirm their submission via this email.</p></div>
+<div>
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:6px"><label style="font-size:14px;font-weight:500;color:#020617">Phone</label><span style="display:inline-flex;align-items:center;gap:4px;border-radius:999px;border:1px solid rgba(147,197,253,0.5);background:rgba(239,246,255,0.7);padding:1px 7px;font-size:11px;font-weight:500;color:#1d4ed8"><svg width="10" height="10" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 3v4M3 5h4M6 17v4M4 19h4M13 3l2.5 6.5L22 12l-6.5 2.5L13 21l-2.5-6.5L4 12l6.5-2.5z"></path></svg>Auto-filled</span></div>
+<div style="display:flex;gap:8px">
+<div style="width:140px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;height:40px;border:1px solid rgba(191,219,254,0.7);border-radius:6px;background:rgba(239,246,255,0.5);padding:0 12px;font-size:14px;color:#020617">🇺🇸 +1<svg width="14" height="14" sc-camel-view-box="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><path d="M6 9l6 6 6-6"></path></svg></div>
+<div style="flex:1;display:flex;align-items:center;gap:8px;height:40px;border:1px solid rgba(191,219,254,0.7);border-radius:6px;background:rgba(239,246,255,0.5);padding:0 12px"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="rgba(59,130,246,0.7)" stroke-width="2" stroke-linecap="round" style="flex-shrink:0"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"></path></svg><span style="font-size:14px;color:#020617">(206) 555-0148</span></div>
+</div>
+<p style="font-size:13px;color:#64748b;margin-top:6px;line-height:1.5">Without a leading + on the number, the country isn’t detected automatically—select it above.</p>
+</div>
+<div><div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:6px"><label style="font-size:14px;font-weight:500;color:#020617">LinkedIn URL</label><span style="font-size:12px;font-weight:400;color:#94a3b8">(optional)</span><span style="display:inline-flex;align-items:center;gap:4px;border-radius:999px;border:1px solid rgba(147,197,253,0.5);background:rgba(239,246,255,0.7);padding:1px 7px;font-size:11px;font-weight:500;color:#1d4ed8"><svg width="10" height="10" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 3v4M3 5h4M6 17v4M4 19h4M13 3l2.5 6.5L22 12l-6.5 2.5L13 21l-2.5-6.5L4 12l6.5-2.5z"></path></svg>Auto-filled</span></div><div style="display:flex;align-items:center;gap:8px;height:40px;border:1px solid rgba(191,219,254,0.7);border-radius:6px;background:rgba(239,246,255,0.5);padding:0 12px"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="rgba(59,130,246,0.7)" stroke-width="2" stroke-linecap="round" style="flex-shrink:0"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg><span style="font-size:14px;color:#020617">https://www.linkedin.com/in/mayarobins</span></div></div>
+<div><div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:6px"><label style="font-size:14px;font-weight:500;color:#020617">GitHub URL</label><span style="font-size:12px;font-weight:400;color:#94a3b8">(optional)</span></div><div style="display:flex;align-items:center;gap:8px;height:40px;border:1px solid #e2e8f0;border-radius:6px;background:#ffffff;padding:0 12px"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="rgba(59,130,246,0.7)" stroke-width="2" stroke-linecap="round" style="flex-shrink:0"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-1-2.6c3.1-.3 6.4-1.5 6.4-7A5.4 5.4 0 0 0 20 4.8 5 5 0 0 0 19.9 1S18.7.6 16 2.5a13.4 13.4 0 0 0-7 0C6.3.6 5.1 1 5.1 1A5 5 0 0 0 5 4.8a5.4 5.4 0 0 0-1.4 3.8c0 5.4 3.3 6.6 6.4 7A3.4 3.4 0 0 0 9 18.2V22"></path></svg><span style="font-size:14px;color:#94a3b8">https://github.com/username</span></div></div>
+<div><div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:6px"><label style="font-size:14px;font-weight:500;color:#020617">Portfolio URL</label><span style="font-size:12px;font-weight:400;color:#94a3b8">(optional)</span></div><div style="display:flex;align-items:center;gap:8px;height:40px;border:1px solid #e2e8f0;border-radius:6px;background:#ffffff;padding:0 12px"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="rgba(59,130,246,0.7)" stroke-width="2" stroke-linecap="round" style="flex-shrink:0"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"></path><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"></path></svg><span style="font-size:14px;color:#94a3b8">https://yourportfolio.com</span></div></div>
+</div>
+</section>
+
+<section style="border:1px solid #e2e8f0;border-left:3px solid rgba(96,165,250,0.5);border-radius:12px;background:#ffffff;padding:24px;box-shadow:0 1px 2px rgba(0,0,0,0.05);margin-bottom:20px"><div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:20px"><div style="width:36px;height:36px;flex-shrink:0;border-radius:8px;background:#eff6ff;color:#2563eb;display:flex;align-items:center;justify-content:center"><svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div><div><h3 style="font-size:16px;font-weight:600;line-height:1.25;color:#020617">Location</h3><p style="font-size:14px;color:#64748b;margin-top:2px">Where the candidate is based</p></div></div>
+<div style="display:flex;flex-direction:column;gap:20px">
+<div><div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:6px"><label style="font-size:14px;font-weight:500;color:#020617">Current Location</label><span style="display:inline-flex;align-items:center;gap:4px;border-radius:999px;border:1px solid rgba(147,197,253,0.5);background:rgba(239,246,255,0.7);padding:1px 7px;font-size:11px;font-weight:500;color:#1d4ed8"><svg width="10" height="10" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 3v4M3 5h4M6 17v4M4 19h4M13 3l2.5 6.5L22 12l-6.5 2.5L13 21l-2.5-6.5L4 12l6.5-2.5z"></path></svg>Auto-filled</span></div><div style="display:flex;align-items:center;gap:8px;height:40px;border:1px solid rgba(191,219,254,0.7);border-radius:6px;background:rgba(239,246,255,0.5);padding:0 12px"><span style="font-size:14px;color:#020617">Seattle, WA</span></div><p style="font-size:13px;color:#64748b;margin-top:6px;line-height:1.5">City, State/Country (e.g., San Francisco, CA)</p></div>
+<div style="display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid #e2e8f0;border-radius:8px;padding:14px 16px;background:#ffffff"><div style="min-width:0"><p style="font-size:14px;font-weight:500;color:#020617">Willing to Relocate</p><p style="font-size:13px;color:#64748b;margin-top:2px">Is the candidate open to relocating for this role?</p></div><span style="flex-shrink:0;width:44px;height:24px;border-radius:999px;background:#e2e8f0;display:flex;align-items:center;padding:2px;justify-content:flex-start"><span style="width:20px;height:20px;border-radius:999px;background:#ffffff;box-shadow:0 1px 2px rgba(0,0,0,0.2)"></span></span></div>
+</div>
+</section>
+
+<section style="border:1px solid #e2e8f0;border-left:3px solid rgba(96,165,250,0.5);border-radius:12px;background:#ffffff;padding:24px;box-shadow:0 1px 2px rgba(0,0,0,0.05);margin-bottom:20px"><div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:20px"><div style="width:36px;height:36px;flex-shrink:0;border-radius:8px;background:#eff6ff;color:#2563eb;display:flex;align-items:center;justify-content:center"><svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2l8 4v6c0 5-3.4 8.9-8 10-4.6-1.1-8-5-8-10V6z"></path></svg></div><div><h3 style="font-size:16px;font-weight:600;line-height:1.25;color:#020617">Visa &amp; Sponsorship</h3><p style="font-size:14px;color:#64748b;margin-top:2px">Work authorization requirements</p></div></div>
+<div style="display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:16px;border:1px solid #e2e8f0;border-radius:8px;padding:14px 16px;background:#ffffff"><div style="min-width:0"><p style="font-size:14px;font-weight:500;color:#020617">Requires Visa Sponsorship</p><p style="font-size:13px;color:#64748b;margin-top:2px">Does this candidate require visa sponsorship to work?</p></div><span style="flex-shrink:0;width:44px;height:24px;border-radius:999px;background:#0f172a;display:flex;align-items:center;padding:2px;justify-content:flex-end"><span style="width:20px;height:20px;border-radius:999px;background:#ffffff;box-shadow:0 1px 2px rgba(0,0,0,0.2)"></span></span></div>
+<div>
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:6px"><label style="font-size:14px;font-weight:500;color:#020617">Sponsorship Details</label></div>
+<div style="min-height:80px;border:1px solid #e2e8f0;border-radius:6px;background:#ffffff;padding:10px 12px;font-size:14px;color:#020617;line-height:1.5">Currently on an H-1B transferable from her present employer; no cap issues.</div>
+</div>
+</div>
+</section>
+
+<div style="margin-top:24px;padding-top:16px;border-top:1px solid #e2e8f0;display:flex;align-items:center;justify-content:space-between;gap:16px">
+<span style="display:inline-flex;align-items:center;gap:6px;height:40px;padding:0 12px;font-size:15px;font-weight:500;color:#475569"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M11 18l-6-6 6-6"></path></svg>Previous step</span>
+<div style="display:flex;align-items:center;gap:8px">
+<span style="display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 12px;border:1px solid #e2e8f0;border-radius:6px;background:#ffffff;font-size:14px;font-weight:500;color:#475569"><svg width="14" height="14" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><path d="M17 21v-8H7v8M7 3v5h8"></path></svg>Save Draft</span>
+<span style="display:inline-flex;align-items:center;gap:6px;height:40px;padding:0 16px;border-radius:6px;background:#0f172a;color:#ffffff;font-size:15px;font-weight:500;box-shadow:0 1px 2px rgba(0,0,0,0.05)">Next<svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isMessaging }}" hint-placeholder-val="{{ true }}">
+<div style="display:grid;grid-template-columns:320px minmax(0,1fr);height:640px;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;background:#ffffff">
+<div style="border-right:1px solid #e2e8f0;background:#ffffff;display:flex;flex-direction:column;min-height:0">
+<div style="display:flex;align-items:center;justify-content:center;padding:16px 18px;background:#f1f5f9;border-bottom:1px solid #e2e8f0;flex-shrink:0"><span style="font-size:17px;font-weight:700;letter-spacing:-0.02em;color:#0f172a">Channels</span></div>
+<div style="display:flex;border-bottom:1px solid rgba(226,232,240,0.5);flex-shrink:0"><div style="position:relative;flex:1;padding:14px 12px;text-align:center;font-size:13px;font-weight:600;color:#0f172a;border-bottom:2px solid #0f172a;background:#ffffff">Group Messages<span style="position:absolute;top:4px;right:4px;min-width:18px;height:18px;padding:0 5px;border-radius:999px;background:#0f172a;color:#ffffff;font-size:10px;font-weight:600;display:inline-flex;align-items:center;justify-content:center">4</span></div><div style="position:relative;flex:1;padding:14px 12px;text-align:center;font-size:13px;font-weight:500;color:#64748b;border-bottom:2px solid transparent;background:#ffffff">Private Messages</div></div>
+<div style="padding:12px 14px;border-bottom:1px solid rgba(226,232,240,0.6);flex-shrink:0">
+<div style="display:flex;align-items:center;gap:8px;height:36px;border:1px solid #e2e8f0;border-radius:8px;background:#ffffff;padding:0 10px"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="rgba(2,6,23,0.6)" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg><span style="font-size:14px;color:rgba(100,116,139,0.6)">Search channels</span></div>
+</div>
+<div style="flex:1;overflow:hidden;padding:8px 0">
+<div style="position:relative;display:flex;align-items:center;gap:12px;padding:10px 12px;margin:2px 8px;border-radius:8px;background:#f1f5f9"><span style="position:absolute;left:0;top:10%;bottom:10%;width:3px;border-radius:0 2px 2px 0;background:rgba(15,23,42,0.3)"></span><span style="width:40px;height:40px;flex-shrink:0;border-radius:999px;background:#1d4ed8;color:#ffffff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600">NL</span><div style="min-width:0;flex:1"><div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px"><p style="font-size:14px;font-weight:700;color:#020617;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Senior Backend Engineer</p><span style="font-size:11px;color:#94a3b8;flex-shrink:0">11:24</span></div><div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:2px"><p style="font-size:13px;color:#64748b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:400">Rachel: Two days onsite is firm, but we’re…</p></div></div></div>
+<div style="position:relative;display:flex;align-items:center;gap:12px;padding:10px 12px;margin:2px 8px;border-radius:8px;background:transparent"><span style="width:40px;height:40px;flex-shrink:0;border-radius:999px;background:#0f766e;color:#ffffff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600">AV</span><div style="min-width:0;flex:1"><div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px"><p style="font-size:14px;font-weight:500;color:#020617;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Staff Data Engineer</p><span style="font-size:11px;color:#94a3b8;flex-shrink:0">Mon</span></div><div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:2px"><p style="font-size:13px;color:#64748b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:400">You: Sending three profiles this afternoon</p></div></div></div>
+<div style="position:relative;display:flex;align-items:center;gap:12px;padding:10px 12px;margin:2px 8px;border-radius:8px;background:transparent"><span style="width:40px;height:40px;flex-shrink:0;border-radius:999px;background:#7c3aed;color:#ffffff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600">BR</span><div style="min-width:0;flex:1"><div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px"><p style="font-size:14px;font-weight:600;color:#020617;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Product Designer, Growth</p><span style="font-size:11px;color:#94a3b8;flex-shrink:0">Mon</span></div><div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:2px"><p style="font-size:13px;color:#64748b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600">Bounty rate updated to 20%</p><span style="flex-shrink:0;min-width:18px;height:18px;padding:0 5px;border-radius:999px;background:#0f172a;color:#ffffff;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center">2</span></div></div></div>
+<div style="position:relative;display:flex;align-items:center;gap:12px;padding:10px 12px;margin:2px 8px;border-radius:8px;background:transparent"><span style="width:40px;height:40px;flex-shrink:0;border-radius:999px;background:#b45309;color:#ffffff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600">CX</span><div style="min-width:0;flex:1"><div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px"><p style="font-size:14px;font-weight:600;color:#020617;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Head of Compliance</p><span style="font-size:11px;color:#94a3b8;flex-shrink:0">Fri</span></div><div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:2px"><p style="font-size:13px;color:#64748b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600">Dan: Can we widen the salary band?</p><span style="flex-shrink:0;min-width:18px;height:18px;padding:0 5px;border-radius:999px;background:#0f172a;color:#ffffff;font-size:11px;font-weight:600;display:flex;align-items:center;justify-content:center">2</span></div></div></div>
+<div style="position:relative;display:flex;align-items:center;gap:12px;padding:10px 12px;margin:2px 8px;border-radius:8px;background:transparent"><span style="width:40px;height:40px;flex-shrink:0;border-radius:999px;background:#475569;color:#ffffff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600">OP</span><div style="min-width:0;flex:1"><div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px"><p style="font-size:14px;font-weight:500;color:#020617;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Platform Engineer, Infra</p><span style="font-size:11px;color:#94a3b8;flex-shrink:0">Jul 3</span></div><div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:2px"><p style="font-size:13px;color:#64748b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:400">You: Closed — candidate accepted</p></div></div></div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;min-height:0">
+<div style="display:flex;align-items:center;gap:12px;padding:12px 16px;background:#ffffff;border-bottom:1px solid #e2e8f0;flex-shrink:0">
+<span style="width:40px;height:40px;flex-shrink:0;border-radius:999px;background:#1d4ed8;color:#ffffff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600">NL</span>
+<div style="flex:1;min-width:0">
+<h2 style="font-size:14px;font-weight:600;color:#0f172a;line-height:1.2;margin-bottom:2px">Senior Backend Engineer — Northlake Labs</h2>
+<p style="font-size:12px;color:rgba(100,116,139,0.8);line-height:1.2">4 members, <span style="color:#16a34a;font-weight:500">2 online</span></p>
+</div>
+</div>
+
+<div style="flex:1;min-height:0;overflow:hidden;padding:16px 20px;display:flex;flex-direction:column;justify-content:flex-end;gap:14px;background:#ffffff">
+<div style="display:flex;align-items:center;gap:12px"><span style="height:1px;flex:1;background:#e2e8f0"></span><span style="font-size:12px;color:#64748b;text-align:center">Bounty published — 18% of salary, 90 day guarantee</span><span style="height:1px;flex:1;background:#e2e8f0"></span></div>
+<div style="display:flex;gap:8px;align-items:flex-end;"><span style="width:32px;height:32px;flex-shrink:0;border-radius:999px;background:#334155;color:#ffffff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600">RC</span><div style="max-width:70%;display:flex;flex-direction:column;align-items:flex-start;gap:2px"><span style="font-size:12px;font-weight:600;color:#0f172a;padding:0 4px">Rachel Chen</span><div style="border-radius:16px;border-bottom-left-radius:2px;padding:8px 12px;font-size:14px;line-height:1.5;background:#f7f7f8;color:#0f172a">Heads up: we bumped the band to $160–185k. Same fee structure.</div><span style="font-size:11px;color:#94a3b8;padding:0 4px">9:02 AM</span></div></div>
+<div style="display:flex;gap:8px;align-items:flex-end;flex-direction:row-reverse;"><span style="width:32px;height:32px;flex-shrink:0;border-radius:999px;background:#1d4ed8;color:#ffffff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600">YO</span><div style="max-width:70%;display:flex;flex-direction:column;align-items:flex-end;gap:2px"><div style="border-radius:16px;border-bottom-right-radius:2px;padding:8px 12px;font-size:14px;line-height:1.5;background:#e9f2ff;color:#0f172a">Got it. That unlocks a few people I passed on last week — I’ll re-approach them today.</div><span style="font-size:11px;color:#94a3b8;padding:0 4px">9:14 AM</span></div></div>
+<div style="display:flex;align-items:center;gap:12px"><span style="height:1px;flex:1;background:#e2e8f0"></span><span style="font-size:12px;color:#64748b;text-align:center">Today</span><span style="height:1px;flex:1;background:#e2e8f0"></span></div>
+<div style="display:flex;gap:8px;align-items:flex-end;flex-direction:row-reverse;"><span style="width:32px;height:32px;flex-shrink:0;border-radius:999px;background:#1d4ed8;color:#ffffff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600">YO</span><div style="max-width:70%;display:flex;flex-direction:column;align-items:flex-end;gap:2px"><div style="border-radius:16px;border-bottom-right-radius:2px;padding:8px 12px;font-size:14px;line-height:1.5;background:#e9f2ff;color:#0f172a">Submitted Maya Robins. 6 yrs Go, ran ingestion at 40k/s at her last shop. Only wrinkle is an H-1B transfer.</div><span style="font-size:11px;color:#94a3b8;padding:0 4px">10:58 AM</span></div></div>
+<div style="display:flex;gap:8px;align-items:flex-end;"><span style="width:32px;height:32px;flex-shrink:0;border-radius:999px;background:#334155;color:#ffffff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600">RC</span><div style="max-width:70%;display:flex;flex-direction:column;align-items:flex-start;gap:2px"><span style="font-size:12px;font-weight:600;color:#0f172a;padding:0 4px">Rachel Chen</span><div style="border-radius:16px;border-bottom-left-radius:2px;padding:8px 12px;font-size:14px;line-height:1.5;background:#f7f7f8;color:#0f172a">Two days onsite is firm, but we’re fine sponsoring a transfer. Sending her to the hiring manager now.</div><span style="font-size:11px;color:#94a3b8;padding:0 4px">11:24 AM</span></div></div>
+</div>
+
+<div style="padding:12px 16px;border-top:1px solid #e2e8f0;background:#ffffff;flex-shrink:0">
+<div style="display:flex;align-items:center;gap:10px;border:1px solid #e2e8f0;border-radius:20px;background:#f7f7f8;padding:8px 12px">
+<svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" style="flex-shrink:0"><path d="M21.4 11.1 12.3 20a5.5 5.5 0 0 1-7.8-7.8l9.2-9.1a3.7 3.7 0 0 1 5.2 5.2l-9.2 9.1a1.8 1.8 0 0 1-2.6-2.6l8.5-8.4"></path></svg>
+<span style="flex:1;font-size:14px;color:#94a3b8">Send a message</span>
+<svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" style="flex-shrink:0"><circle cx="12" cy="12" r="9"></circle><path d="M8.5 14.5a4 4 0 0 0 7 0M9 9.5h.01M15 9.5h.01"></path></svg>
+<span style="display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:999px;background:#0f172a;color:#ffffff;flex-shrink:0"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"></path></svg></span>
+</div>
+</div>
+</div>
+</div>
+</sc-if>
+
+<sc-if value="{{ isCandidates }}" hint-placeholder-val="{{ true }}">
+<div style="border:1px solid #e2e8f0;border-radius:8px;background:#ffffff;box-shadow:0 1px 2px rgba(0,0,0,0.05);overflow:hidden">
+<sc-raw-table style="width:100%;border-collapse:collapse;font-size:14px">
+<sc-raw-thead>
+<sc-raw-tr style="border-bottom:1px solid #e2e8f0;background:#ffffff">
+<sc-raw-th style="text-align:center;padding:12px 16px;font-size:12px;font-weight:600;color:#64748b;width:120px">AI Score</sc-raw-th>
+<sc-raw-th style="text-align:left;padding:12px 16px;font-size:12px;font-weight:600;color:#64748b">Candidate</sc-raw-th>
+<sc-raw-th style="text-align:left;padding:12px 16px;font-size:12px;font-weight:600;color:#64748b">Location</sc-raw-th>
+<sc-raw-th style="text-align:left;padding:12px 16px;font-size:12px;font-weight:600;color:#64748b">Current Role</sc-raw-th>
+<sc-raw-th style="text-align:left;padding:12px 16px;font-size:12px;font-weight:600;color:#64748b">Submitted</sc-raw-th>
+<sc-raw-th style="text-align:left;padding:12px 16px;font-size:12px;font-weight:600;color:#64748b">Status</sc-raw-th>
+</sc-raw-tr>
+</sc-raw-thead>
+<sc-raw-tbody>
+<sc-raw-tr style="border-bottom:1px solid #f1f5f9" style-hover="background:#f8fafc">
+<sc-raw-td style="text-align:center;padding:14px 16px"><span style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;border-radius:999px;font-size:14px;background:#dcfce7;color:#15803d;border:1px solid #bbf7d0"><span style="font-weight:600">9.1</span><span style="font-size:12px;opacity:0.75">/10</span></span></sc-raw-td>
+<sc-raw-td style="padding:14px 16px"><div style="display:flex;align-items:center;gap:12px"><div style="width:40px;height:40px;border-radius:999px;background:#e2e8f0;color:#475569;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600">SK</div><div><div style="font-weight:500;color:#020617">Sana Khouri</div><div style="font-size:12px;color:#64748b">sana.k@example.com</div></div></div></sc-raw-td>
+<sc-raw-td style="padding:14px 16px;color:#64748b">Austin, TX</sc-raw-td>
+<sc-raw-td style="padding:14px 16px"><div style="font-weight:500;color:#020617">Staff Data Engineer</div><div style="color:#64748b">Ardent Health</div></sc-raw-td>
+<sc-raw-td style="padding:14px 16px"><div style="font-weight:500;color:#020617">Staff Data Engineer <span style="color:#64748b;font-weight:400">@ Ardent Health</span></div><div style="font-size:12px;color:#64748b">Mar 2, 2026</div></sc-raw-td>
+<sc-raw-td style="padding:14px 16px"><span style="display:inline-flex;align-items:center;border-radius:999px;padding:4px 12px;font-size:12px;font-weight:500;background:#f0fdfa;color:#115e59;border:1px solid #5eead4">Offer Letter Sent</span></sc-raw-td>
+</sc-raw-tr>
+<sc-raw-tr style="border-bottom:1px solid #f1f5f9" style-hover="background:#f8fafc">
+<sc-raw-td style="text-align:center;padding:14px 16px"><span style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;border-radius:999px;font-size:14px;background:#dcfce7;color:#15803d;border:1px solid #bbf7d0"><span style="font-weight:600">8.4</span><span style="font-size:12px;opacity:0.75">/10</span></span></sc-raw-td>
+<sc-raw-td style="padding:14px 16px"><div style="display:flex;align-items:center;gap:12px"><div style="width:40px;height:40px;border-radius:999px;background:#e2e8f0;color:#475569;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600">MR</div><div><div style="font-weight:500;color:#020617">Maya Robins</div><div style="font-size:12px;color:#64748b">m.robins@example.com</div></div></div></sc-raw-td>
+<sc-raw-td style="padding:14px 16px;color:#64748b">Seattle, WA</sc-raw-td>
+<sc-raw-td style="padding:14px 16px"><div style="font-weight:500;color:#020617">Senior Backend Engineer</div><div style="color:#64748b">Northlake Labs</div></sc-raw-td>
+<sc-raw-td style="padding:14px 16px"><div style="font-weight:500;color:#020617">Senior Backend Engineer <span style="color:#64748b;font-weight:400">@ Northlake Labs</span></div><div style="font-size:12px;color:#64748b">Feb 27, 2026</div></sc-raw-td>
+<sc-raw-td style="padding:14px 16px"><span style="display:inline-flex;align-items:center;border-radius:999px;padding:4px 12px;font-size:12px;font-weight:500;background:#eef2ff;color:#4338ca;border:1px solid #c7d2fe">Interviewing</span></sc-raw-td>
+</sc-raw-tr>
+<sc-raw-tr style="border-bottom:1px solid #f1f5f9" style-hover="background:#f8fafc">
+<sc-raw-td style="text-align:center;padding:14px 16px"><span style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;border-radius:999px;font-size:14px;background:#fef9c3;color:#a16207;border:1px solid #fef08a"><span style="font-weight:600">7.2</span><span style="font-size:12px;opacity:0.75">/10</span></span></sc-raw-td>
+<sc-raw-td style="padding:14px 16px"><div style="display:flex;align-items:center;gap:12px"><div style="width:40px;height:40px;border-radius:999px;background:#e2e8f0;color:#475569;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600">DO</div><div><div style="font-weight:500;color:#020617">Devin Osei</div><div style="font-size:12px;color:#64748b">devin.osei@example.com</div></div></div></sc-raw-td>
+<sc-raw-td style="padding:14px 16px;color:#64748b">Remote · US</sc-raw-td>
+<sc-raw-td style="padding:14px 16px"><div style="font-weight:500;color:#020617">Product Designer</div><div style="color:#64748b">Fernwood</div></sc-raw-td>
+<sc-raw-td style="padding:14px 16px"><div style="font-weight:500;color:#020617">Product Designer <span style="color:#64748b;font-weight:400">@ Fernwood</span></div><div style="font-size:12px;color:#64748b">Feb 21, 2026</div></sc-raw-td>
+<sc-raw-td style="padding:14px 16px"><span style="display:inline-flex;align-items:center;border-radius:999px;padding:4px 12px;font-size:12px;font-weight:500;background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe">In Review</span></sc-raw-td>
+</sc-raw-tr>
+<sc-raw-tr style="border-bottom:1px solid #f1f5f9" style-hover="background:#f8fafc">
+<sc-raw-td style="text-align:center;padding:14px 16px"><span style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;border-radius:999px;font-size:14px;background:#f1f5f9;color:#334155;border:1px solid #e2e8f0"><span style="font-weight:600">6.5</span><span style="font-size:12px;opacity:0.75">/10</span></span></sc-raw-td>
+<sc-raw-td style="padding:14px 16px"><div style="display:flex;align-items:center;gap:12px"><div style="width:40px;height:40px;border-radius:999px;background:#e2e8f0;color:#475569;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600">JW</div><div><div style="font-weight:500;color:#020617">Jonah Weiss</div><div style="font-size:12px;color:#64748b">jonah.w@example.com</div></div></div></sc-raw-td>
+<sc-raw-td style="padding:14px 16px;color:#64748b">Chicago, IL</sc-raw-td>
+<sc-raw-td style="padding:14px 16px"><div style="font-weight:500;color:#020617">Product Manager</div><div style="color:#64748b">Fernwood</div></sc-raw-td>
+<sc-raw-td style="padding:14px 16px"><div style="font-weight:500;color:#020617">Product Manager <span style="color:#64748b;font-weight:400">@ Northlake Labs</span></div><div style="font-size:12px;color:#64748b">Feb 14, 2026</div></sc-raw-td>
+<sc-raw-td style="padding:14px 16px"><span style="display:inline-flex;align-items:center;border-radius:999px;padding:4px 12px;font-size:12px;font-weight:500;background:#f8fafc;color:#334155;border:1px solid #e2e8f0">New</span></sc-raw-td>
+</sc-raw-tr>
+<sc-raw-tr style-hover="background:#f8fafc">
+<sc-raw-td style="text-align:center;padding:14px 16px"><span style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;border-radius:999px;font-size:14px;background:#dcfce7;color:#15803d;border:1px solid #bbf7d0"><span style="font-weight:600">8.8</span><span style="font-size:12px;opacity:0.75">/10</span></span></sc-raw-td>
+<sc-raw-td style="padding:14px 16px"><div style="display:flex;align-items:center;gap:12px"><div style="width:40px;height:40px;border-radius:999px;background:#e2e8f0;color:#475569;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600">TP</div><div><div style="font-weight:500;color:#020617">Tomas Pike</div><div style="font-size:12px;color:#64748b">t.pike@example.com</div></div></div></sc-raw-td>
+<sc-raw-td style="padding:14px 16px;color:#64748b">Tacoma, WA</sc-raw-td>
+<sc-raw-td style="padding:14px 16px"><div style="font-weight:500;color:#020617">Physical Therapist</div><div style="color:#64748b">Cascade Care</div></sc-raw-td>
+<sc-raw-td style="padding:14px 16px"><div style="font-weight:500;color:#020617">Physical Therapist <span style="color:#64748b;font-weight:400">@ Cascade Care</span></div><div style="font-size:12px;color:#64748b">Jan 9, 2026</div></sc-raw-td>
+<sc-raw-td style="padding:14px 16px"><span style="display:inline-flex;align-items:center;border-radius:999px;padding:4px 12px;font-size:12px;font-weight:500;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0">Hired</span></sc-raw-td>
+</sc-raw-tr>
+</sc-raw-tbody>
+</sc-raw-table>
+</div>
+</sc-if>
+
+<sc-if value="{{ isMatches }}" hint-placeholder-val="{{ true }}">
+<div style="max-width:820px;border:1px solid rgba(226,232,240,0.8);border-radius:8px;background:#ffffff;box-shadow:0 1px 2px rgba(0,0,0,0.05)">
+<div style="padding:24px;display:flex;flex-direction:column;gap:16px">
+
+<div style="display:flex;align-items:flex-start;gap:12px">
+<div style="width:48px;height:48px;flex-shrink:0;background:#ffffff;border:1px solid #e2e8f0;border-radius:8px;display:flex;align-items:center;justify-content:center;padding:8px"><div style="width:100%;height:100%;border-radius:4px;background:#1e293b;color:#ffffff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700">NL</div></div>
+<div style="min-width:0;flex:1;display:flex;flex-direction:column;gap:4px">
+<h4 style="font-size:14px;font-weight:600;color:#020617">Senior Backend Engineer <svg width="14" height="14" sc-camel-view-box="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" style="display:inline-block;vertical-align:middle;margin-left:4px"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><path d="M15 3h6v6M10 14L21 3"></path></svg></h4>
+<p style="font-size:12px;color:#64748b">Northlake Labs</p>
+<div style="display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;font-size:12px;color:#64748b">
+<span style="display:flex;align-items:center;gap:4px"><svg width="12" height="12" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Seattle, WA</span>
+<span style="font-weight:500;color:#020617">$160k – $185k</span>
+<span style="display:flex;align-items:center;gap:4px"><svg width="12" height="12" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path></svg>Full-time</span>
+</div>
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:8px">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+<p style="font-size:12px;font-weight:500;color:#020617">Matched Candidates (12)</p>
+<div style="width:100%;max-width:240px;flex-shrink:0;height:36px;border:1px solid #e2e8f0;border-radius:6px;padding:0 12px;display:flex;align-items:center;justify-content:space-between;font-size:14px;color:#020617">Sort by: Match tier<svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="opacity:0.5"><path d="M6 9l6 6 6-6"></path></svg></div>
+</div>
+
+<div style="display:grid;gap:12px">
+<div style="border:1px solid rgba(226,232,240,0.6);border-radius:8px;background:#ffffff;padding:12px;display:flex;flex-direction:column;gap:8px">
+<div style="display:flex;align-items:center;gap:12px">
+<div style="width:40px;height:40px;border-radius:999px;background:#e2e8f0;color:#475569;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;border:2px solid #ffffff;flex-shrink:0">MR</div>
+<div style="flex:1;min-width:0">
+<div style="display:flex;align-items:center;gap:12px;min-width:0"><span style="font-size:14px;font-weight:500;color:#0f172a">Maya Robins</span><span style="display:flex;align-items:center;gap:4px"><img src="assets/63f0a67d-8a3e-4401-8bbd-1309ab22dc8c.png" alt="LinkedIn" style="width:20px;height:20px;object-fit:contain"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path></svg></span></div>
+<div style="font-size:12px;color:#64748b">Senior Backend Engineer · matched 6h ago</div>
+</div>
+<div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:8px 12px;flex-shrink:0">
+<span style="font-size:12px;font-weight:700;padding:4px 8px;border-radius:999px;background:#dcfce7;color:#15803d;border:1px solid #bbf7d0;white-space:nowrap">Great Match</span>
+<span style="display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:600;padding:4px 8px;border-radius:999px;background:#fffbeb;color:#92400e;border:1px solid #fde68a;white-space:nowrap"><svg width="12" height="12" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 2v6h-6M3 12a9 9 0 0 1 15-6.7L21 8M3 22v-6h6M21 12a9 9 0 0 1-15 6.7L3 16"></path></svg>Outdated</span>
+<span style="padding:4px;display:flex;align-items:center"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round" style="transform:rotate(180deg)"><path d="M6 9l6 6 6-6"></path></svg></span>
+<span style="display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 10px;border:1px solid #e2e8f0;border-radius:6px;font-size:13px;font-weight:500;color:#475569"><svg width="14" height="14" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="5" rx="1"></rect><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8M10 12h4"></path></svg>Archive</span>
+<span style="display:inline-flex;align-items:center;height:32px;padding:0 12px;border-radius:6px;background:#0f172a;color:#ffffff;font-size:13px;font-weight:500">Submit Candidate</span>
+</div>
+</div>
+
+<div style="border-radius:8px;background:#ffffff;border:1px solid #e2e8f0;box-shadow:0 1px 2px rgba(0,0,0,0.05);overflow:hidden;margin-top:4px">
+<div style="display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid #e2e8f0">
+<svg width="14" height="14" sc-camel-view-box="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" style="flex-shrink:0"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"></path></svg>
+<h5 style="font-size:12px;font-weight:600;color:#020617">Requirements scorecard</h5>
+</div>
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 12px;background:#fffbeb;border-bottom:1px solid #fde68a">
+<p style="font-size:11px;line-height:1.3;color:#92400e">Requirements were updated since this scorecard was generated.</p>
+<span style="display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:500;color:#78350f;flex-shrink:0"><svg width="12" height="12" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 2v6h-6M3 12a9 9 0 0 1 15-6.7L21 8"></path></svg>Refresh</span>
+</div>
+<div style="padding:12px;display:flex;flex-direction:column;gap:12px">
+<p style="font-size:12px;line-height:1.6;color:#020617;border-bottom:1px solid rgba(226,232,240,0.5);padding-bottom:12px">Eight years in backend engineering, most recently owning the payments platform at a Series-B fintech through a full re-architecture.</p>
+
+<section>
+<h6 style="font-size:14px;font-weight:600;color:#020617;margin-bottom:8px">Years of Experience</h6>
+<ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px">
+<li style="border:1px solid #e2e8f0;border-radius:6px;background:#ffffff;padding:10px 12px">
+<div style="display:flex;align-items:flex-start;gap:12px">
+<span style="width:28px;height:28px;border-radius:999px;border:1px solid #a7f3d0;background:#ecfdf5;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"></circle><path d="M9 12l2 2 4-4"></path></svg></span>
+<div style="flex:1;min-width:0">
+<div style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:4px 8px">
+<p style="font-size:14px;font-weight:500;line-height:1.35;color:#020617;flex:1;min-width:0">5+ years in a backend language (Go, Java or Rust)</p>
+<span style="display:inline-flex;align-items:center;border-radius:999px;border:1px solid #fecaca;background:#fef2f2;color:#991b1b;padding:2px 8px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;flex-shrink:0">Required</span>
+</div>
+<p style="margin-top:6px;font-size:12px;font-style:italic;line-height:1.35;color:#64748b">8 years total, 6 of them writing Go in production.</p>
+</div>
+</div>
+</li>
+</ul>
+</section>
+
+<section>
+<h6 style="font-size:14px;font-weight:600;color:#020617;margin-bottom:8px">Work Experience</h6>
+<ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px">
+<li style="border:1px solid #e2e8f0;border-radius:6px;background:#ffffff;padding:10px 12px">
+<div style="display:flex;align-items:flex-start;gap:12px">
+<span style="width:28px;height:28px;border-radius:999px;border:1px solid #a7f3d0;background:#ecfdf5;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"></circle><path d="M9 12l2 2 4-4"></path></svg></span>
+<div style="flex:1;min-width:0">
+<div style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:4px 8px">
+<p style="font-size:14px;font-weight:500;line-height:1.35;color:#020617;flex:1;min-width:0">Owned a service handling production traffic end to end</p>
+<span style="display:inline-flex;align-items:center;border-radius:999px;border:1px solid #fecaca;background:#fef2f2;color:#991b1b;padding:2px 8px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;flex-shrink:0">Required</span>
+</div>
+<p style="margin-top:6px;font-size:12px;font-style:italic;line-height:1.35;color:#64748b">Led the payments platform migration; on-call owner for two years.</p>
+</div>
+</div>
+</li>
+</ul>
+</section>
+
+<section>
+<h6 style="font-size:14px;font-weight:600;color:#020617;margin-bottom:8px">Hard Skills</h6>
+<ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px">
+<li style="border:1px solid #e2e8f0;border-radius:6px;background:#ffffff;padding:10px 12px">
+<div style="display:flex;align-items:flex-start;gap:12px">
+<span style="width:28px;height:28px;border-radius:999px;border:1px solid #e2e8f0;background:#f1f5f9;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 2.2-3 4"></path><path d="M12 17h.01"></path></svg></span>
+<div style="flex:1;min-width:0">
+<div style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:4px 8px">
+<p style="font-size:14px;font-weight:500;line-height:1.35;color:#020617;flex:1;min-width:0">Kubernetes in production</p>
+<span style="display:inline-flex;align-items:center;border-radius:999px;border:1px solid #bae6fd;background:#f0f9ff;color:#075985;padding:2px 8px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;flex-shrink:0">Nice to have</span>
+</div>
+<p style="margin-top:6px;font-size:12px;font-style:italic;line-height:1.35;color:#64748b">Resume mentions Kubernetes but not as an ownership area — unclear.</p>
+</div>
+</div>
+</li>
+<li style="border:1px solid #e2e8f0;border-radius:6px;background:#ffffff;padding:10px 12px">
+<div style="display:flex;align-items:flex-start;gap:12px">
+<span style="width:28px;height:28px;border-radius:999px;border:1px solid #fecaca;background:#fef2f2;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"></circle><path d="M15 9l-6 6M9 9l6 6"></path></svg></span>
+<div style="flex:1;min-width:0">
+<div style="display:flex;flex-wrap:wrap;align-items:flex-start;gap:4px 8px">
+<p style="font-size:14px;font-weight:500;line-height:1.35;color:#020617;flex:1;min-width:0">Experience with real-time streaming (Kafka or similar)</p>
+<span style="display:inline-flex;align-items:center;border-radius:999px;border:1px solid #e2e8f0;background:#f1f5f9;color:#334155;padding:2px 8px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;white-space:nowrap;flex-shrink:0">Standard</span>
+</div>
+<p style="margin-top:6px;font-size:12px;font-style:italic;line-height:1.35;color:#64748b">No streaming experience found in the resume.</p>
+</div>
+</div>
+</li>
+</ul>
+</section>
+</div>
+</div>
+</div>
+
+<div style="border:1px solid rgba(226,232,240,0.6);border-radius:8px;background:#ffffff;padding:12px;display:flex;align-items:center;gap:12px">
+<div style="width:40px;height:40px;border-radius:999px;background:#e2e8f0;color:#475569;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;border:2px solid #ffffff;flex-shrink:0">RA</div>
+<div style="flex:1;min-width:0"><div style="font-size:14px;font-weight:500;color:#0f172a">Rosa Almeida</div><div style="font-size:12px;color:#64748b">Backend Engineer · matched 2 days ago</div></div>
+<div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:8px 12px;flex-shrink:0">
+<span style="font-size:12px;font-weight:700;padding:4px 8px;border-radius:999px;background:#fef9c3;color:#a16207;border:1px solid #fef08a;white-space:nowrap">Good Match</span>
+<span style="padding:4px;display:flex;align-items:center"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"></path></svg></span>
+<span style="display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 10px;border:1px solid #e2e8f0;border-radius:6px;font-size:13px;font-weight:500;color:#475569"><svg width="14" height="14" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="5" rx="1"></rect><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8M10 12h4"></path></svg>Archive</span>
+<span style="display:inline-flex;align-items:center;height:32px;padding:0 12px;border-radius:6px;background:#0f172a;color:#ffffff;font-size:13px;font-weight:500">Submit Candidate</span>
+</div>
+</div>
+
+<div style="border:1px solid rgba(226,232,240,0.6);border-radius:8px;background:#ffffff;padding:12px;display:flex;align-items:center;gap:12px;opacity:0.6">
+<div style="width:40px;height:40px;border-radius:999px;background:#e2e8f0;color:#475569;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;border:2px solid #ffffff;flex-shrink:0">JW</div>
+<div style="flex:1;min-width:0"><div style="font-size:14px;font-weight:500;color:#64748b">Jonah Weiss</div><div style="font-size:12px;color:#64748b">Platform Engineer · matched 5 days ago</div><div style="font-size:11px;color:#64748b;margin-top:2px">Submitted by <span style="font-weight:500;color:#334155">Dana Whitfield</span></div></div>
+<div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:8px 12px;flex-shrink:0">
+<span style="font-size:12px;font-weight:700;padding:4px 8px;border-radius:999px;background:#f1f5f9;color:#334155;border:1px solid #e2e8f0;white-space:nowrap">Ok Match</span>
+<span style="padding:4px;display:flex;align-items:center"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"></path></svg></span>
+<span style="display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 10px;border:1px solid #e2e8f0;border-radius:6px;font-size:13px;font-weight:500;color:#475569"><svg width="14" height="14" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 3h18v5H3zM5 8v11a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8"></path><path d="M9 12l3-3 3 3"></path></svg>Unarchive</span>
+</div>
+</div>
+</div>
+
+<div style="display:flex;justify-content:center;padding-top:8px"><span style="font-size:12px;color:#64748b">Show More (9 more)</span></div>
+</div>
+
+</div>
+</div>
+</sc-if>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+
+
+<section style="background:#fbfaf6;padding:0 0 84px">
+<div style="max-width:1180px;margin:0 auto;padding:0 40px">
+<p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#98958a;margin-bottom:20px">The whole loop</p>
+<h2 style="font-size:40px;line-height:1.14;font-weight:400;letter-spacing:-0.012em;color:#14140f;max-width:720px;margin-bottom:44px;text-wrap:balance">Role posted to recruiter paid, in six steps.</h2>
+<div style="border-top:1px solid #14140f">
+
+<div style="display:grid;grid-template-columns:72px 1fr;gap:0 40px;align-items:baseline;padding:34px 0;border-bottom:1px solid #e2e0d7">
+<span style="font-size:20px;letter-spacing:0.08em;color:#98958a">I</span>
+<div><h3 style="font-size:27px;font-weight:400;margin-bottom:10px">Price the role</h3><p style="font-size:18px;line-height:1.7;color:#45443c;max-width:760px;text-wrap:pretty">A fee, a guarantee window, a salary band. No retainer.</p></div>
+</div>
+
+<div style="display:grid;grid-template-columns:72px 1fr;gap:0 40px;align-items:baseline;padding:34px 0;border-bottom:1px solid #e2e0d7">
+<span style="font-size:20px;letter-spacing:0.08em;color:#98958a">II</span>
+<div><h3 style="font-size:27px;font-weight:400;margin-bottom:10px">Reach the network</h3><p style="font-size:18px;line-height:1.7;color:#45443c;max-width:760px;text-wrap:pretty">Live to one thousand specialised recruiters in minutes.</p></div>
+</div>
+
+<div style="display:grid;grid-template-columns:72px 1fr;gap:0 40px;align-items:baseline;padding:34px 0;border-bottom:1px solid #e2e0d7">
+<span style="font-size:20px;letter-spacing:0.08em;color:#98958a">III</span>
+<div><h3 style="font-size:27px;font-weight:400;margin-bottom:10px">Match on requirements</h3><p style="font-size:18px;line-height:1.7;color:#45443c;max-width:760px;text-wrap:pretty">Scorecards with reasoning, not keyword soup.</p></div>
+</div>
+
+<div style="display:grid;grid-template-columns:72px 1fr;gap:0 40px;align-items:baseline;padding:34px 0;border-bottom:1px solid #e2e0d7">
+<span style="font-size:20px;letter-spacing:0.08em;color:#98958a">IV</span>
+<div><h3 style="font-size:27px;font-weight:400;margin-bottom:10px">Verify the submission</h3><p style="font-size:18px;line-height:1.7;color:#45443c;max-width:760px;text-wrap:pretty">Both sides confirm, so ownership was never disputed.</p></div>
+</div>
+
+<div style="display:grid;grid-template-columns:72px 1fr;gap:0 40px;align-items:baseline;padding:34px 0;border-bottom:1px solid #e2e0d7">
+<span style="font-size:20px;letter-spacing:0.08em;color:#98958a">V</span>
+<div><h3 style="font-size:27px;font-weight:400;margin-bottom:10px">Move the pipeline</h3><p style="font-size:18px;line-height:1.7;color:#45443c;max-width:760px;text-wrap:pretty">Client and recruiter read the same stages. No status emails.</p></div>
+</div>
+
+<div style="display:grid;grid-template-columns:72px 1fr;gap:0 40px;align-items:baseline;padding:34px 0;border-bottom:1px solid #e2e0d7">
+<span style="font-size:20px;letter-spacing:0.08em;color:#98958a">VI</span>
+<div><h3 style="font-size:27px;font-weight:400;margin-bottom:10px">Pay on outcome</h3><p style="font-size:18px;line-height:1.7;color:#45443c;max-width:760px;text-wrap:pretty">Seven figures moved. Nobody chased an invoice.</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<sc-if value="{{ showTestimonials }}" hint-placeholder-val="{{ true }}">
+<section style="background:#fbfaf6;padding:0 0 84px">
+<div style="max-width:1180px;margin:0 auto;padding:0 40px">
+<p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#98958a;margin-bottom:20px">In their words</p>
+<h2 style="font-size:40px;line-height:1.14;font-weight:400;letter-spacing:-0.012em;color:#14140f;max-width:720px;margin-bottom:44px">What the two sides said about it.</h2>
+<div style="max-width:100%;border-top:1px solid #14140f">
+<blockquote style="margin:0;padding:40px 0;border-bottom:1px solid #e2e0d7"><p style="font-size:22px;line-height:1.45;max-width:560px;margin-bottom:20px;text-wrap:pretty">“Two years of using it and it never stopped feeling recruiter-first — transparent pricing, real people, no status-chasing.”</p><footer style="font-size:16px;color:#98958a">Peter Frelinghuysen, Co-founder, Earth Brands</footer></blockquote>
+<blockquote style="margin:0;padding:40px 0;border-bottom:1px solid #e2e0d7"><p style="font-size:22px;line-height:1.45;max-width:560px;margin-bottom:20px;text-wrap:pretty">“The most thoughtful hiring platform we ever ran a role through. Genuinely sad to see it pause.”</p><footer style="font-size:16px;color:#98958a">Aaron Zelinger, Co-founder, Closure</footer></blockquote>
+<blockquote style="margin:0;padding:40px 0;border-bottom:1px solid #e2e0d7"><p style="font-size:22px;line-height:1.45;max-width:560px;margin-bottom:20px;text-wrap:pretty">“Simple, transparent, and it worked — we filled three roles through SeekLab before any retained search firm called us back.”</p><footer style="font-size:16px;color:#98958a">Peter Wang, CEO, Aktos</footer></blockquote>
+</div>
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;max-width:100%;margin-top:40px">
+<div style="min-width:0;overflow:hidden;border:1px solid #e2e0d7;padding:10px;background:#ffffff"><image-slot id="testimonial-shot-1" style="width:100%;height:150px" shape="rect" fit="contain" placeholder="LinkedIn recommendation"></image-slot></div>
+<div style="min-width:0;overflow:hidden;border:1px solid #e2e0d7;padding:10px;background:#ffffff"><image-slot id="testimonial-shot-2" style="width:100%;height:150px" shape="rect" fit="contain" placeholder="Client email or Slack"></image-slot></div>
+<div style="min-width:0;overflow:hidden;border:1px solid #e2e0d7;padding:10px;background:#ffffff"><image-slot id="testimonial-shot-3" style="width:100%;height:150px" shape="rect" fit="contain" placeholder="Recruiter testimonial"></image-slot></div>
+</div>
+</div>
+</section>
+</sc-if>
+
+
+<section id="video" data-screen-label="Video" style="background:#fbfaf6;padding:0 0 84px">
+<div style="max-width:1180px;margin:0 auto;padding:0 40px">
+<p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#98958a;margin-bottom:20px">Product video</p>
+<h2 style="font-size:40px;line-height:1.14;font-weight:400;letter-spacing:-0.012em;color:#14140f;max-width:720px;margin-bottom:16px;text-wrap:balance">See the product in motion.</h2>
+<p style="font-size:18px;line-height:1.7;color:#45443c;max-width:640px;margin-bottom:36px;text-wrap:pretty">A short walkthrough of the recruiting operating system — bounty posting, matching, pipeline, and payouts.</p>
+<div id="retrospective-video" data-youtube-id="" style="position:relative;width:100%;aspect-ratio:16/9;background:#14140f;border:1px solid #e2e0d7;overflow:hidden">
+<iframe id="retrospective-youtube" title="SeekLab product walkthrough" style="position:absolute;inset:0;width:100%;height:100%;border:0;display:none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+<div id="retrospective-video-placeholder" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:32px;text-align:center;color:#fbfaf6">
+<img src="assets/seeklab-mark.png" alt="" width="48" height="48" style="width:48px;height:48px;object-fit:contain;filter:brightness(0) invert(1);opacity:0.9">
+<p style="font-size:18px;max-width:420px;line-height:1.5;color:#fbfaf6">Paste a YouTube video ID into <code style="font-size:14px;letter-spacing:0.02em">data-youtube-id</code> on <code style="font-size:14px">#retrospective-video</code> to embed the walkthrough.</p>
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="timeline" data-screen-label="Timeline" style="background:#fbfaf6;padding:0 0 84px">
+<div style="max-width:1180px;margin:0 auto;padding:0 40px">
+<p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#98958a;margin-bottom:20px">Timeline</p>
+<h2 style="font-size:40px;line-height:1.14;font-weight:400;letter-spacing:-0.012em;color:#14140f;margin-bottom:44px">How it went.</h2>
+<div style="border-top:1px solid #14140f;max-width:100%">
+
+<div style="display:grid;grid-template-columns:200px 1fr;gap:0 40px;padding:30px 0;border-bottom:1px solid #e2e0d7">
+<div style="font-size:22px;letter-spacing:0.04em;color:#14140f;padding-top:6px">2024</div>
+<div><h3 style="font-size:27px;font-weight:400;margin-bottom:10px">SeekLab starts</h3><p style="font-size:18px;line-height:1.7;color:#45443c;max-width:760px;text-wrap:pretty">Three founders, one thesis: recruiting should be priced on outcomes and run on software, not retainers and spreadsheets.</p></div>
+</div>
+
+<div style="display:grid;grid-template-columns:200px 1fr;gap:0 40px;padding:30px 0;border-bottom:1px solid #e2e0d7">
+<div style="font-size:22px;letter-spacing:0.04em;color:#14140f;padding-top:6px">2025</div>
+<div><h3 style="font-size:27px;font-weight:400;margin-bottom:10px">The marketplace goes live</h3><p style="font-size:18px;line-height:1.7;color:#45443c;max-width:760px;text-wrap:pretty">First bounties posted, first placements paid. The recruiter side of the network crosses 250.</p></div>
+</div>
+
+<div style="display:grid;grid-template-columns:200px 1fr;gap:0 40px;padding:30px 0;border-bottom:1px solid #e2e0d7">
+<div style="font-size:22px;letter-spacing:0.04em;color:#14140f;padding-top:6px">Early 2026</div>
+<div><h3 style="font-size:27px;font-weight:400;margin-bottom:10px">YC companies pile in</h3><p style="font-size:18px;line-height:1.7;color:#45443c;max-width:760px;text-wrap:pretty">Thirty Y Combinator companies hiring on the platform. AI matching ships, and the recruiter network passes one thousand.</p></div>
+</div>
+
+<div style="display:grid;grid-template-columns:200px 1fr;gap:0 40px;padding:30px 0;border-bottom:1px solid #e2e0d7">
+<div style="font-size:22px;letter-spacing:0.04em;color:#14140f;padding-top:6px">2026</div>
+<div><h3 style="font-size:27px;font-weight:400;margin-bottom:10px">One hundred placements, seven figures paid</h3><p style="font-size:18px;line-height:1.7;color:#45443c;max-width:760px;text-wrap:pretty">Seventy-five companies hired through SeekLab. Every bounty settled, every recruiter paid.</p></div>
+</div>
+
+<div style="display:grid;grid-template-columns:200px 1fr;gap:0 40px;padding:30px 0;border-bottom:1px solid #e2e0d7">
+<div style="font-size:22px;letter-spacing:0.04em;color:#14140f;padding-top:6px">Now</div>
+<div><h3 style="font-size:27px;font-weight:400;margin-bottom:10px">Onto what's next</h3><p style="font-size:18px;line-height:1.7;color:#45443c;max-width:760px;text-wrap:pretty">The three of us are building again. If any of the above is useful to you, the fastest way in is a message.</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="team" data-screen-label="Team" style="background:#fbfaf6;padding:0 0 84px">
+<div style="max-width:1180px;margin:0 auto;padding:0 40px">
+<p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#98958a;margin-bottom:20px">The team</p>
+<h2 style="font-size:40px;line-height:1.14;font-weight:400;letter-spacing:-0.012em;color:#14140f;max-width:720px;margin-bottom:44px;text-wrap:balance">The three of us. Reach any of us directly.</h2>
+<div style="border-top:1px solid #14140f;max-width:100%">
+
+<div style="display:grid;grid-template-columns:200px 1fr;gap:0 40px;padding:34px 0;border-bottom:1px solid #e2e0d7">
+<div style="padding-top:6px"><img src="assets/47678d40-6419-4ea7-a92a-6297c5efd385.jpg" alt="Justin Diraddo" style="width:72px;height:72px;border-radius:999px;object-fit:cover;filter:grayscale(1)"></div>
+<div style="max-width:820px">
+<h3 style="font-size:27px;font-weight:400;margin-bottom:8px">Justin Diraddo</h3>
+<p style="font-size:16px;color:#98958a;margin-bottom:14px">Co-founder &amp; CEO</p>
+<p style="font-size:18px;line-height:1.7;color:#45443c;margin-bottom:16px;text-wrap:pretty">Ran sales and financial operations — every client relationship, the commercial model behind the bounties, and the money moving through them.</p>
+<a href="https://www.linkedin.com/in/justindiraddo" target="_blank" rel="noopener noreferrer" style="font-size:22px;color:#14140f;border-bottom:1px solid #cdcabe;padding-bottom:2px" style-hover="border-bottom-color:#14140f">LinkedIn</a>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:200px 1fr;gap:0 40px;padding:34px 0;border-bottom:1px solid #e2e0d7">
+<div style="padding-top:6px"><img src="assets/456c0893-d380-4127-ae8f-3c42b1477ddb.jpg" alt="Lucan Laurence" style="width:72px;height:72px;border-radius:999px;object-fit:cover;filter:grayscale(1)"></div>
+<div style="max-width:820px">
+<h3 style="font-size:27px;font-weight:400;margin-bottom:8px">Lucan Laurence</h3>
+<p style="font-size:16px;color:#98958a;margin-bottom:14px">Co-founder &amp; COO</p>
+<p style="font-size:18px;line-height:1.7;color:#45443c;margin-bottom:16px;text-wrap:pretty">Owned the supply side — recruiting, vetting and running the 1,000-strong recruiter network — and led the build as technical lead on the platform.</p>
+<a href="https://www.linkedin.com/in/lucan-laurence-134a94213" target="_blank" rel="noopener noreferrer" style="font-size:22px;color:#14140f;border-bottom:1px solid #cdcabe;padding-bottom:2px" style-hover="border-bottom-color:#14140f">LinkedIn</a>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:200px 1fr;gap:0 40px;padding:34px 0;border-bottom:1px solid #e2e0d7">
+<div style="padding-top:6px"><div style="width:72px;height:72px;border-radius:999px;border:1px solid #e2e0d7;background:#eeebe3;display:flex;align-items:center;justify-content:center;font-size:18px;letter-spacing:0.08em;color:#98958a;text-align:center">FK</div></div>
+<div style="max-width:820px">
+<h3 style="font-size:27px;font-weight:400;margin-bottom:8px">Fernando Kuniy</h3>
+<p style="font-size:16px;color:#98958a;margin-bottom:14px">Co-founder &amp; Founding Engineer</p>
+<p style="font-size:18px;line-height:1.7;color:#45443c;margin-bottom:16px;text-wrap:pretty">Responsible for all technical integration — the matching pipeline, resume parsing, third-party services and the infrastructure it all ran on.</p>
+<a href="#" style="font-size:22px;color:#14140f;border-bottom:1px solid #cdcabe;padding-bottom:2px" style-hover="border-bottom-color:#14140f">LinkedIn</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<footer style="background:#fbfaf6;padding:0 0 72px">
+<div style="max-width:1180px;margin:0 auto;padding:0 40px">
+<div style="border-top:1px solid #14140f;padding-top:34px;display:flex;align-items:flex-end;justify-content:space-between;gap:40px;flex-wrap:wrap">
+<p style="font-size:17px;line-height:1.7;color:#45443c;max-width:560px;text-wrap:pretty">Thank you to the one thousand recruiters, seventy-five companies and every candidate who trusted us with a move.</p>
+<div style="display:flex;flex-direction:column;gap:12px;text-align:right">
+<span style="font-size:18px;color:#14140f;border-bottom:1px solid #cdcabe;padding-bottom:3px">hello@theseeklab.com</span>
+<a href="https://www.linkedin.com/company/seeklab" target="_blank" rel="noopener noreferrer" style="font-size:16px;color:#45443c">SeekLab on LinkedIn</a>
+<span style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#98958a;margin-top:12px">© 2026 SeekLab</span>
+</div>
+</div>
+</div>
+</footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;showcaseChrome&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;browser&quot;,&quot;bare&quot;],&quot;default&quot;:&quot;browser&quot;,&quot;tsType&quot;:&quot;'browser' | 'bare'&quot;,&quot;section&quot;:&quot;Product showcase&quot;},&quot;showLogoMarquee&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sections&quot;},&quot;showTestimonials&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Sections&quot;},&quot;animateNumbers&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+class Component extends DCLogic {
+  state = { tab: 'overview' };
+
+  componentDidMount() {
+    this.fitAppMock();
+    this.countUp();
+  }
+
+  componentDidUpdate() { this.fitAppMock(); }
+
+  /** The app recreation is authored at a true 1440px desktop width and scaled to fit,
+   *  so every component gets the width the real layout assumes and never re-wraps. */
+  fitAppMock() {
+    const frame = document.querySelector('[data-app-frame]');
+    const inner = document.querySelector('[data-app-inner]');
+    if (!frame || !inner) return;
+    const apply = () => {
+      const w = frame.clientWidth;
+      if (!w) return;
+      const s = w / 1440;
+      inner.style.transform = 'scale(' + s + ')';
+      frame.style.height = inner.offsetHeight * s + 'px';
+    };
+    apply();
+    requestAnimationFrame(apply);
+    if (!this._fitRO && typeof ResizeObserver !== 'undefined') {
+      this._fitRO = new ResizeObserver(apply);
+      this._fitRO.observe(frame);
+      this._fitRO.observe(inner);
+    }
+  }
+
+  countUp() {
+    if (this.props.animateNumbers === false) return;
+    const nodes = Array.from(document.querySelectorAll('[data-count-to]'));
+    if (!nodes.length) return;
+    const run = (el) => {
+      if (el.dataset.counted) return;
+      el.dataset.counted = '1';
+      const target = parseInt(el.dataset.countTo, 10);
+      const suffix = el.dataset.countSuffix || '';
+      const steps = 60, dur = 1500;
+      let i = 0;
+      const t = setInterval(() => {
+        i++;
+        const p = Math.min(i / steps, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.floor(target * eased).toLocaleString('en-US') + (p >= 1 ? suffix : '');
+        if (p >= 1) clearInterval(t);
+      }, dur / steps);
+    };
+    nodes.forEach((el) => { el.textContent = '0'; });
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { run(e.target); io.unobserve(e.target); } });
+    }, { threshold: 0.4 });
+    nodes.forEach((el) => io.observe(el));
+    this._io = io;
+  }
+
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+    if (this._fitRO) this._fitRO.disconnect();
+  }
+
+  tabStyle(active) {
+    return "appearance:none;font-family:'EB Garamond',Georgia,serif;cursor:pointer;height:40px;padding:0 14px;border:0;border-radius:0;background:transparent;font-size:14px;letter-spacing:0.02em;transition:color 0.18s;box-shadow:none;" +
+      (active
+        ? 'color:#14140f;box-shadow:inset 0 -2px 0 #14140f;'
+        : 'color:#98958a;');
+  }
+
+  navStyle(active) {
+    return 'display:flex;align-items:center;gap:12px;padding:8px 16px;border-radius:8px;font-size:14px;text-align:left;' +
+      (active
+        ? 'background:rgba(15,23,42,0.07);color:#0f172a;border:1px solid rgba(15,23,42,0.2);box-shadow:0 1px 2px rgba(0,0,0,0.05);'
+        : 'color:#64748b;border:1px solid transparent;');
+  }
+
+  renderVals() {
+    const t = this.state.tab;
+    const go = (k) => () => this.setState({ tab: k });
+    const meta = {
+      overview: {
+        title: 'Recruiter Dashboard',
+        path: '/recruiter/overview',
+        caption: 'The first screen a recruiter saw every morning: active pipeline, roles being worked, and every candidate who moved since yesterday.'
+      },
+      pipeline: {
+        title: 'Recruiter Dashboard',
+        path: '/recruiter-dashboard/candidates',
+        caption: 'A drag-and-drop board shared with the hiring company. Stage colours, pipeline value per column, and submissions that could not be double-claimed.'
+      },
+      bounties: {
+        title: 'Recruiter Dashboard',
+        path: '/recruiter-dashboard/open-roles',
+        caption: 'Bounties, not job posts. Recruiters saw the fee, the guarantee window and the salary band before spending a minute sourcing.'
+      },
+      details: {
+        title: 'Role Details',
+        path: '/role-details/8f21',
+        caption: 'The full brief: structured must-have requirements the matcher could actually read, screening questions, edit history, and a message channel straight to the hiring team.'
+      },
+      post: {
+        title: 'Post a Role',
+        path: '/post-bounty',
+        caption: 'A four-step wizard — start from a JD, paste, or describe it to the AI; edit the content; lock the must-haves; then price it. Live to the network on publish.'
+      },
+      submit: {
+        title: 'Submit Candidate',
+        path: '/submit-candidate/8f21',
+        caption: 'Six steps, and the resume did most of the typing: parse the PDF, auto-fill fourteen fields, flag duplicates, then confirm with the candidate before it counted.'
+      },
+      messaging: {
+        title: 'Messages',
+        path: '/messages',
+        caption: 'Every bounty came with its own channel. Recruiters, the hiring team and the platform all talked in one thread, with rate changes and submissions posted into it automatically.'
+      },
+      candidates: {
+        title: 'Recruiter Dashboard',
+        path: '/recruiter-dashboard/candidates?view=list',
+        caption: 'The operator view: every submission sortable by AI fit score, location, role and stage, with verification state on the row.'
+      },
+      matches: {
+        title: 'Recruiter Dashboard',
+        path: '/recruiter-dashboard/candidates?tab=ai-matches',
+        caption: 'Requirement-level scorecards. Each match came with the reasoning behind the number, so a recruiter could disagree with it out loud.'
+      }
+    };
+    const m = meta[t];
+    return {
+      isOverview: t === 'overview',
+      isPipeline: t === 'pipeline',
+      isBounties: t === 'bounties',
+      isCandidates: t === 'candidates',
+      isMatches: t === 'matches',
+      isDetails: t === 'details',
+      isPost: t === 'post',
+      isSubmit: t === 'submit',
+      isMessaging: t === 'messaging',
+      goOverview: go('overview'),
+      goPipeline: go('pipeline'),
+      goBounties: go('bounties'),
+      goCandidates: go('candidates'),
+      goMatches: go('matches'),
+      goDetails: go('details'),
+      goPost: go('post'),
+      goSubmit: go('submit'),
+      goMessaging: go('messaging'),
+      tabOverview: this.tabStyle(t === 'overview'),
+      tabPipeline: this.tabStyle(t === 'pipeline'),
+      tabBounties: this.tabStyle(t === 'bounties'),
+      tabCandidates: this.tabStyle(t === 'candidates'),
+      tabMatches: this.tabStyle(t === 'matches'),
+      tabDetails: this.tabStyle(t === 'details'),
+      tabPost: this.tabStyle(t === 'post'),
+      tabSubmit: this.tabStyle(t === 'submit'),
+      tabMessaging: this.tabStyle(t === 'messaging'),
+      navOverview: this.navStyle(t === 'overview'),
+      navPipeline: this.navStyle(t === 'pipeline' || t === 'candidates' || t === 'submit'),
+      navBounties: this.navStyle(t === 'bounties' || t === 'details'),
+      navPost: this.navStyle(t === 'post'),
+      navMatches: this.navStyle(t === 'matches'),
+      navMessaging: this.navStyle(t === 'messaging'),
+      paneTitle: m.title,
+      chromePath: m.path,
+      paneCaption: m.caption,
+      showChrome: (this.props.showcaseChrome ?? 'browser') === 'browser',
+      showTestimonials: this.props.showTestimonials ?? true,
+      showLogoMarquee: this.props.showLogoMarquee ?? true
+    };
+  }
+}
+</script>
+
+
+<script>
+(function () {
+  var root = document.getElementById('retrospective-video');
+  if (!root) return;
+  var id = (root.getAttribute('data-youtube-id') || '').trim();
+  var iframe = document.getElementById('retrospective-youtube');
+  var placeholder = document.getElementById('retrospective-video-placeholder');
+  if (!id || !iframe) return;
+  iframe.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?rel=0&modestbranding=1';
+  iframe.style.display = 'block';
+  if (placeholder) placeholder.style.display = 'none';
+})();
+</script>
+</body></html>
