@@ -579,6 +579,14 @@ h1, h2, h3, h4, p { margin: 0; }
   header nav { gap: 16px !important; }
 }
 @media print { body { background: #fff; } }
+.sl-step { display:grid; grid-template-columns:64px 1fr; gap:0 32px; padding:36px 0; border-bottom:1px solid #e2e0d7; }
+.sl-step:last-child { border-bottom:none; }
+.sl-step-marker { position:relative; display:flex; justify-content:center; }
+.sl-step-marker::before { content:''; position:absolute; top:0; bottom:0; left:50%; width:1px; background:#e2e0d7; transform:translateX(-50%); }
+.sl-step:first-child .sl-step-marker::before { top:22px; }
+.sl-step:last-child .sl-step-marker::before { bottom:calc(100% - 22px); }
+.sl-step-num { position:relative; width:44px; height:44px; border-radius:999px; border:1.5px solid #14140f; background:#fbfaf6; display:flex; align-items:center; justify-content:center; font-size:15px; letter-spacing:0.04em; color:#14140f; }
+.sl-step-tag { display:inline-block; margin-top:12px; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#98958a; }
 </style>
 </helmet>
 
@@ -1447,34 +1455,34 @@ h1, h2, h3, h4, p { margin: 0; }
 <h2 style="font-size:40px;line-height:1.14;font-weight:400;letter-spacing:-0.012em;color:#14140f;max-width:720px;margin-bottom:44px;text-wrap:balance">Role posted to recruiter paid, in six steps.</h2>
 <div style="border-top:1px solid #14140f">
 
-<div style="display:grid;grid-template-columns:72px 1fr;gap:0 40px;align-items:baseline;padding:34px 0;border-bottom:1px solid #e2e0d7">
-<span style="font-size:20px;letter-spacing:0.08em;color:#98958a">I</span>
-<div><h3 style="font-size:27px;font-weight:400;margin-bottom:10px">Price the role</h3><p style="font-size:18px;line-height:1.7;color:#45443c;max-width:760px;text-wrap:pretty">A fee, a guarantee window, a salary band. No retainer.</p></div>
+<div class="sl-step">
+<div class="sl-step-marker"><span class="sl-step-num">I</span></div>
+<div><h3 style="font-size:27px;font-weight:400;margin-bottom:10px">Price the role</h3><p style="font-size:18px;line-height:1.7;color:#45443c;max-width:760px;text-wrap:pretty">Set a fee, a guarantee window, and a salary band — live in minutes. No retainer, no lock-in contract.</p><span class="sl-step-tag">Under 5 minutes to post</span></div>
 </div>
 
-<div style="display:grid;grid-template-columns:72px 1fr;gap:0 40px;align-items:baseline;padding:34px 0;border-bottom:1px solid #e2e0d7">
-<span style="font-size:20px;letter-spacing:0.08em;color:#98958a">II</span>
-<div><h3 style="font-size:27px;font-weight:400;margin-bottom:10px">Reach the network</h3><p style="font-size:18px;line-height:1.7;color:#45443c;max-width:760px;text-wrap:pretty">Live to one thousand specialised recruiters in minutes.</p></div>
+<div class="sl-step">
+<div class="sl-step-marker"><span class="sl-step-num">II</span></div>
+<div><h3 style="font-size:27px;font-weight:400;margin-bottom:10px">Reach the network</h3><p style="font-size:18px;line-height:1.7;color:#45443c;max-width:760px;text-wrap:pretty">The role goes out to a thousand recruiters who already work your niche — not a black hole on a job board.</p><span class="sl-step-tag">1,000 specialised recruiters</span></div>
 </div>
 
-<div style="display:grid;grid-template-columns:72px 1fr;gap:0 40px;align-items:baseline;padding:34px 0;border-bottom:1px solid #e2e0d7">
-<span style="font-size:20px;letter-spacing:0.08em;color:#98958a">III</span>
-<div><h3 style="font-size:27px;font-weight:400;margin-bottom:10px">Match on requirements</h3><p style="font-size:18px;line-height:1.7;color:#45443c;max-width:760px;text-wrap:pretty">Scorecards with reasoning, not keyword soup.</p></div>
+<div class="sl-step">
+<div class="sl-step-marker"><span class="sl-step-num">III</span></div>
+<div><h3 style="font-size:27px;font-weight:400;margin-bottom:10px">Match on requirements</h3><p style="font-size:18px;line-height:1.7;color:#45443c;max-width:760px;text-wrap:pretty">Every candidate arrives with a scorecard and the reasoning behind it — a case to read, not a keyword match to guess at.</p><span class="sl-step-tag">Reasoned, not keyword-matched</span></div>
 </div>
 
-<div style="display:grid;grid-template-columns:72px 1fr;gap:0 40px;align-items:baseline;padding:34px 0;border-bottom:1px solid #e2e0d7">
-<span style="font-size:20px;letter-spacing:0.08em;color:#98958a">IV</span>
-<div><h3 style="font-size:27px;font-weight:400;margin-bottom:10px">Verify the submission</h3><p style="font-size:18px;line-height:1.7;color:#45443c;max-width:760px;text-wrap:pretty">Both sides confirm, so ownership was never disputed.</p></div>
+<div class="sl-step">
+<div class="sl-step-marker"><span class="sl-step-num">IV</span></div>
+<div><h3 style="font-size:27px;font-weight:400;margin-bottom:10px">Verify the submission</h3><p style="font-size:18px;line-height:1.7;color:#45443c;max-width:760px;text-wrap:pretty">Client and recruiter both confirm the submission before it counts — so nobody argues later about who found who.</p><span class="sl-step-tag">Dual sign-off</span></div>
 </div>
 
-<div style="display:grid;grid-template-columns:72px 1fr;gap:0 40px;align-items:baseline;padding:34px 0;border-bottom:1px solid #e2e0d7">
-<span style="font-size:20px;letter-spacing:0.08em;color:#98958a">V</span>
-<div><h3 style="font-size:27px;font-weight:400;margin-bottom:10px">Move the pipeline</h3><p style="font-size:18px;line-height:1.7;color:#45443c;max-width:760px;text-wrap:pretty">Client and recruiter read the same stages. No status emails.</p></div>
+<div class="sl-step">
+<div class="sl-step-marker"><span class="sl-step-num">V</span></div>
+<div><h3 style="font-size:27px;font-weight:400;margin-bottom:10px">Move the pipeline</h3><p style="font-size:18px;line-height:1.7;color:#45443c;max-width:760px;text-wrap:pretty">One pipeline, one truth. Client and recruiter watch the same stage update live — nobody's writing a status email.</p><span class="sl-step-tag">Shared, real-time stages</span></div>
 </div>
 
-<div style="display:grid;grid-template-columns:72px 1fr;gap:0 40px;align-items:baseline;padding:34px 0;border-bottom:1px solid #e2e0d7">
-<span style="font-size:20px;letter-spacing:0.08em;color:#98958a">VI</span>
-<div><h3 style="font-size:27px;font-weight:400;margin-bottom:10px">Pay on outcome</h3><p style="font-size:18px;line-height:1.7;color:#45443c;max-width:760px;text-wrap:pretty">Seven figures moved. Nobody chased an invoice.</p></div>
+<div class="sl-step">
+<div class="sl-step-marker"><span class="sl-step-num">VI</span></div>
+<div><h3 style="font-size:27px;font-weight:400;margin-bottom:10px">Pay on outcome</h3><p style="font-size:18px;line-height:1.7;color:#45443c;max-width:760px;text-wrap:pretty">Payment triggers the moment the hire is confirmed. Seven figures moved through the system, and nobody had to chase an invoice.</p><span class="sl-step-tag">Seven figures paid out</span></div>
 </div>
 </div>
 </div>
