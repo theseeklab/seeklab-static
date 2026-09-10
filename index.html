@@ -576,7 +576,6 @@ h1, h2, h3, h4, p { margin: 0; }
 }
 @media (max-width: 640px) {
   .sl-logo-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
-  header nav { gap: 16px !important; }
 }
 @media print { body { background: #fff; } }
 .sl-step { display:grid; grid-template-columns:64px 1fr; gap:0 32px; padding:36px 0; border-bottom:1px solid #e2e0d7; }
@@ -587,18 +586,40 @@ h1, h2, h3, h4, p { margin: 0; }
 .sl-step:last-child .sl-step-marker::before { bottom:calc(100% - 22px); }
 .sl-step-num { position:relative; width:44px; height:44px; border-radius:999px; border:1.5px solid #14140f; background:#fbfaf6; display:flex; align-items:center; justify-content:center; font-size:15px; letter-spacing:0.04em; color:#14140f; }
 .sl-step-tag { display:inline-block; margin-top:12px; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:#98958a; }
+
+.sl-info-grid { display:grid; grid-template-columns:200px 1fr; gap:0 40px; }
+
+.sl-nav-toggle-input { display:none; }
+.sl-nav-burger { display:none; }
+.sl-nav-mobile { display:none; }
+@media (max-width: 760px) {
+  .sl-nav-desktop { display:none !important; }
+  .sl-nav-burger { display:flex; flex-direction:column; justify-content:center; align-items:flex-end; gap:5px; width:28px; height:28px; cursor:pointer; flex-shrink:0; }
+  .sl-nav-burger span { display:block; width:100%; height:1.5px; background:#14140f; transition:transform 0.2s ease, opacity 0.2s ease; }
+  .sl-nav-mobile { position:absolute; top:60px; left:0; right:0; flex-direction:column; background:#fbfaf6; border-top:1px solid #e2e0d7; border-bottom:1px solid #e2e0d7; box-shadow:0 12px 24px rgba(20,20,15,0.08); padding:4px 40px 12px; }
+  .sl-nav-mobile a { padding:13px 0; font-size:17px; color:#45443c; border-bottom:1px solid #e2e0d7; }
+  .sl-nav-mobile a:last-child { border-bottom:none; }
+  #sl-nav-toggle:checked ~ .sl-nav-mobile { display:flex; }
+  #sl-nav-toggle:checked ~ .sl-header-bar .sl-nav-burger span:nth-child(1) { transform:translateY(6.5px) rotate(45deg); }
+  #sl-nav-toggle:checked ~ .sl-header-bar .sl-nav-burger span:nth-child(2) { opacity:0; }
+  #sl-nav-toggle:checked ~ .sl-header-bar .sl-nav-burger span:nth-child(3) { transform:translateY(-6.5px) rotate(-45deg); }
+}
+@media (max-width: 700px) {
+  .sl-info-grid { grid-template-columns:1fr; gap:14px 0; }
+}
 </style>
 </helmet>
 
 <div style="min-height:100vh">
 
 <header style="position:sticky;top:0;z-index:300;height:60px;display:flex;align-items:center;background:rgba(251,250,246,0.94);backdrop-filter:blur(6px)">
-<div style="width:100%;max-width:1180px;margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between;gap:32px">
+<input type="checkbox" id="sl-nav-toggle" class="sl-nav-toggle-input" aria-hidden="true">
+<div class="sl-header-bar" style="width:100%;max-width:1180px;margin:0 auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between;gap:32px">
 <a href="#top" style="display:inline-flex;align-items:center;gap:10px;color:#14140f;text-decoration:none">
 <img src="assets/seeklab-mark.png" alt="" width="28" height="28" style="width:28px;height:28px;object-fit:contain">
 <img src="assets/seeklab-wordmark.png" alt="SeekLab" width="110" height="24" style="height:18px;width:auto;object-fit:contain">
 </a>
-<nav style="display:flex;align-items:center;gap:28px;flex-wrap:wrap">
+<nav class="sl-nav-desktop" style="display:flex;align-items:center;gap:28px;flex-wrap:wrap">
 <a href="#numbers" style="font-size:15px;color:#45443c">Numbers</a>
 <a href="#companies" style="font-size:15px;color:#45443c">Companies</a>
 <a href="#built" style="font-size:15px;color:#45443c">What we built</a>
@@ -606,7 +627,18 @@ h1, h2, h3, h4, p { margin: 0; }
 <a href="#timeline" style="font-size:15px;color:#45443c">Timeline</a>
 <a href="#team" style="font-size:15px;color:#45443c">Team</a>
 </nav>
+<label for="sl-nav-toggle" class="sl-nav-burger" aria-label="Toggle menu">
+<span></span><span></span><span></span>
+</label>
 </div>
+<nav class="sl-nav-mobile">
+<a href="#numbers">Numbers</a>
+<a href="#companies">Companies</a>
+<a href="#built">What we built</a>
+<a href="#video">Video</a>
+<a href="#timeline">Timeline</a>
+<a href="#team">Team</a>
+</nav>
 </header>
 
 <section id="top" style="background:#fbfaf6">
@@ -648,7 +680,7 @@ h1, h2, h3, h4, p { margin: 0; }
 
 <div style="display:flex;align-items:baseline;justify-content:space-between;gap:40px;padding:30px 0;border-bottom:1px solid #e2e0d7">
 <span style="font-size:22px;color:#14140f">Paid out in bounties</span>
-<span style="font-size:36px;line-height:1;font-weight:400;color:#14140f;font-variant-numeric:lining-nums tabular-nums">Seven figures</span>
+<span style="font-size:36px;line-height:1;font-weight:400;color:#14140f;font-variant-numeric:lining-nums tabular-nums;text-align:right">Seven figures</span>
 </div>
 </div>
 <p style="font-size:17px;line-height:1.7;color:#45443c;max-width:620px;margin-top:44px;text-wrap:pretty">Every placement was paid on outcome. Every bounty was earned by a recruiter who knew their market cold. Nothing here was billed by the hour.</p>
@@ -1530,27 +1562,27 @@ h1, h2, h3, h4, p { margin: 0; }
 <h2 style="font-size:40px;line-height:1.14;font-weight:400;letter-spacing:-0.012em;color:#14140f;margin-bottom:44px">How it went.</h2>
 <div style="border-top:1px solid #14140f;max-width:100%">
 
-<div style="display:grid;grid-template-columns:200px 1fr;gap:0 40px;padding:30px 0;border-bottom:1px solid #e2e0d7">
+<div class="sl-info-grid" style="padding:30px 0;border-bottom:1px solid #e2e0d7">
 <div style="font-size:22px;letter-spacing:0.04em;color:#14140f;padding-top:6px">2024</div>
 <div><h3 style="font-size:27px;font-weight:400;margin-bottom:10px">SeekLab starts</h3><p style="font-size:18px;line-height:1.7;color:#45443c;max-width:760px;text-wrap:pretty">Three founders, one thesis: recruiting should be priced on outcomes and run on software, not retainers and spreadsheets.</p></div>
 </div>
 
-<div style="display:grid;grid-template-columns:200px 1fr;gap:0 40px;padding:30px 0;border-bottom:1px solid #e2e0d7">
+<div class="sl-info-grid" style="padding:30px 0;border-bottom:1px solid #e2e0d7">
 <div style="font-size:22px;letter-spacing:0.04em;color:#14140f;padding-top:6px">2025</div>
 <div><h3 style="font-size:27px;font-weight:400;margin-bottom:10px">The marketplace goes live</h3><p style="font-size:18px;line-height:1.7;color:#45443c;max-width:760px;text-wrap:pretty">First bounties posted, first placements paid. The recruiter side of the network crosses 250.</p></div>
 </div>
 
-<div style="display:grid;grid-template-columns:200px 1fr;gap:0 40px;padding:30px 0;border-bottom:1px solid #e2e0d7">
+<div class="sl-info-grid" style="padding:30px 0;border-bottom:1px solid #e2e0d7">
 <div style="font-size:22px;letter-spacing:0.04em;color:#14140f;padding-top:6px">Early 2026</div>
 <div><h3 style="font-size:27px;font-weight:400;margin-bottom:10px">YC companies pile in</h3><p style="font-size:18px;line-height:1.7;color:#45443c;max-width:760px;text-wrap:pretty">Thirty Y Combinator companies hiring on the platform. AI matching ships, and the recruiter network passes one thousand.</p></div>
 </div>
 
-<div style="display:grid;grid-template-columns:200px 1fr;gap:0 40px;padding:30px 0;border-bottom:1px solid #e2e0d7">
+<div class="sl-info-grid" style="padding:30px 0;border-bottom:1px solid #e2e0d7">
 <div style="font-size:22px;letter-spacing:0.04em;color:#14140f;padding-top:6px">2026</div>
 <div><h3 style="font-size:27px;font-weight:400;margin-bottom:10px">One hundred placements, seven figures paid</h3><p style="font-size:18px;line-height:1.7;color:#45443c;max-width:760px;text-wrap:pretty">Seventy-five companies hired through SeekLab. Every bounty settled, every recruiter paid.</p></div>
 </div>
 
-<div style="display:grid;grid-template-columns:200px 1fr;gap:0 40px;padding:30px 0;border-bottom:1px solid #e2e0d7">
+<div class="sl-info-grid" style="padding:30px 0;border-bottom:1px solid #e2e0d7">
 <div style="font-size:22px;letter-spacing:0.04em;color:#14140f;padding-top:6px">Now</div>
 <div><h3 style="font-size:27px;font-weight:400;margin-bottom:10px">Onto what's next</h3><p style="font-size:18px;line-height:1.7;color:#45443c;max-width:760px;text-wrap:pretty">The three of us are building again. If any of the above is useful to you, the fastest way in is a message.</p></div>
 </div>
@@ -1564,33 +1596,33 @@ h1, h2, h3, h4, p { margin: 0; }
 <h2 style="font-size:40px;line-height:1.14;font-weight:400;letter-spacing:-0.012em;color:#14140f;max-width:720px;margin-bottom:44px;text-wrap:balance">The three of us. Reach any of us directly.</h2>
 <div style="border-top:1px solid #14140f;max-width:100%">
 
-<div style="display:grid;grid-template-columns:200px 1fr;gap:0 40px;padding:34px 0;border-bottom:1px solid #e2e0d7">
+<div class="sl-info-grid" style="padding:34px 0;border-bottom:1px solid #e2e0d7">
 <div style="padding-top:6px"><img src="assets/47678d40-6419-4ea7-a92a-6297c5efd385.jpg" alt="Justin Diraddo" style="width:72px;height:72px;border-radius:999px;object-fit:cover;filter:grayscale(1)"></div>
 <div style="max-width:820px">
 <h3 style="font-size:27px;font-weight:400;margin-bottom:8px">Justin Diraddo</h3>
 <p style="font-size:16px;color:#98958a;margin-bottom:14px">Co-founder &amp; CEO</p>
 <p style="font-size:18px;line-height:1.7;color:#45443c;margin-bottom:16px;text-wrap:pretty">Ran sales and financial operations — every client relationship, the commercial model behind the bounties, and the money moving through them.</p>
-<a href="https://www.linkedin.com/in/justindiraddo" target="_blank" rel="noopener noreferrer" style="font-size:22px;color:#14140f;border-bottom:1px solid #cdcabe;padding-bottom:2px" style-hover="border-bottom-color:#14140f">LinkedIn</a>
+<a href="https://www.linkedin.com/in/justindiraddo" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:7px;font-size:22px;color:#14140f;border-bottom:1px solid #cdcabe;padding-bottom:2px" style-hover="border-bottom-color:#14140f">LinkedIn<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
 </div>
 </div>
 
-<div style="display:grid;grid-template-columns:200px 1fr;gap:0 40px;padding:34px 0;border-bottom:1px solid #e2e0d7">
+<div class="sl-info-grid" style="padding:34px 0;border-bottom:1px solid #e2e0d7">
 <div style="padding-top:6px"><img src="assets/456c0893-d380-4127-ae8f-3c42b1477ddb.jpg" alt="Lucan Laurence" style="width:72px;height:72px;border-radius:999px;object-fit:cover;filter:grayscale(1)"></div>
 <div style="max-width:820px">
 <h3 style="font-size:27px;font-weight:400;margin-bottom:8px">Lucan Laurence</h3>
 <p style="font-size:16px;color:#98958a;margin-bottom:14px">Co-founder &amp; CTO</p>
 <p style="font-size:18px;line-height:1.7;color:#45443c;margin-bottom:16px;text-wrap:pretty">Owned the supply side — recruiting, vetting and running the 1,000-strong recruiter network — and built the majority of the platform as technical lead.</p>
-<a href="https://www.linkedin.com/in/lucan-laurence-134a94213" target="_blank" rel="noopener noreferrer" style="font-size:22px;color:#14140f;border-bottom:1px solid #cdcabe;padding-bottom:2px" style-hover="border-bottom-color:#14140f">LinkedIn</a>
+<a href="https://www.linkedin.com/in/lucan-laurence-134a94213" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:7px;font-size:22px;color:#14140f;border-bottom:1px solid #cdcabe;padding-bottom:2px" style-hover="border-bottom-color:#14140f">LinkedIn<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
 </div>
 </div>
 
-<div style="display:grid;grid-template-columns:200px 1fr;gap:0 40px;padding:34px 0;border-bottom:1px solid #e2e0d7">
+<div class="sl-info-grid" style="padding:34px 0;border-bottom:1px solid #e2e0d7">
 <div style="padding-top:6px"><img src="assets/fernando_profile.jpeg" alt="Fernando Kuniy" style="width:72px;height:72px;border-radius:999px;object-fit:cover;filter:grayscale(1)"></div>
 <div style="max-width:820px">
 <h3 style="font-size:27px;font-weight:400;margin-bottom:8px">Fernando Kuniy</h3>
 <p style="font-size:16px;color:#98958a;margin-bottom:14px">Co-founder &amp; Founding Engineer</p>
 <p style="font-size:18px;line-height:1.7;color:#45443c;margin-bottom:16px;text-wrap:pretty">Helped build the platform — the matching pipeline, resume parsing, third-party services and the infrastructure it all ran on.</p>
-<a href="https://www.linkedin.com/in/fernando-kuniy/" target="_blank" rel="noopener noreferrer" style="font-size:22px;color:#14140f;border-bottom:1px solid #cdcabe;padding-bottom:2px" style-hover="border-bottom-color:#14140f">LinkedIn</a>
+<a href="https://www.linkedin.com/in/fernando-kuniy/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:7px;font-size:22px;color:#14140f;border-bottom:1px solid #cdcabe;padding-bottom:2px" style-hover="border-bottom-color:#14140f">LinkedIn<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
 </div>
 </div>
 </div>
@@ -1601,8 +1633,8 @@ h1, h2, h3, h4, p { margin: 0; }
 <div style="max-width:1180px;margin:0 auto;padding:0 40px">
 <div style="border-top:1px solid #14140f;padding-top:34px;display:flex;align-items:flex-end;justify-content:space-between;gap:40px;flex-wrap:wrap">
 <p style="font-size:17px;line-height:1.7;color:#45443c;max-width:560px;text-wrap:pretty">Thank you to the one thousand recruiters, seventy-five companies and every candidate who trusted us with a move.</p>
-<div style="display:flex;flex-direction:column;gap:12px;text-align:right">
-<a href="https://www.linkedin.com/company/seeklab" target="_blank" rel="noopener noreferrer" style="font-size:16px;color:#45443c">SeekLab on LinkedIn</a>
+<div style="display:flex;flex-direction:column;align-items:flex-start;gap:12px;text-align:left">
+<a href="https://www.linkedin.com/company/seeklab" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;font-size:16px;color:#45443c">SeekLab on LinkedIn<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a>
 <span style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#98958a;margin-top:12px">© 2026 SeekLab</span>
 </div>
 </div>
@@ -1805,6 +1837,17 @@ class Component extends DCLogic {
 <div id="sl-lightbox" style="display:none;position:fixed;inset:0;background:rgba(20,20,15,0.92);z-index:9999;align-items:center;justify-content:center;padding:40px;cursor:zoom-out">
 <img id="sl-lightbox-img" src="" alt="" style="max-width:100%;max-height:100%;object-fit:contain;box-shadow:0 20px 60px rgba(0,0,0,0.5)">
 </div>
+<script>
+(function () {
+  var toggle = document.getElementById('sl-nav-toggle');
+  if (!toggle) return;
+  var links = document.querySelectorAll('.sl-nav-mobile a');
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function () { toggle.checked = false; });
+  }
+})();
+</script>
+
 <script>
 (function () {
   var lightbox = document.getElementById('sl-lightbox');
