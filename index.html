@@ -571,6 +571,10 @@ a:hover { color: #5f5d54; }
 h1, h2, h3, h4, p { margin: 0; }
 @keyframes sl-rise { 0% { opacity: 0; transform: translateY(10px); } 100% { opacity: 1; transform: translateY(0); } }
 .sl-logo-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
+.sl-logo-tile { display:flex; align-items:center; justify-content:center; min-height:72px; padding:18px 16px; border:1px solid #e2e0d7; background:#ffffff; transition:border-color 0.15s ease; }
+.sl-logo-tile:hover { border-color:#14140f; }
+.sl-logo-tile img { transition:opacity 0.15s ease; }
+.sl-logo-tile:hover img { opacity:1; }
 @media (max-width: 900px) {
   .sl-logo-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
 }
@@ -693,18 +697,18 @@ h1, h2, h3, h4, p { margin: 0; }
 <h2 style="font-size:40px;line-height:1.14;font-weight:400;letter-spacing:-0.012em;color:#14140f;max-width:720px;margin-bottom:16px;text-wrap:balance">Hired with teams building what&rsquo;s next.</h2>
 <p style="font-size:18px;line-height:1.7;color:#45443c;max-width:640px;margin-bottom:40px;text-wrap:pretty">From startups to healthcare to hardware — a sample of the companies that ran hiring on SeekLab.</p>
 <div class="sl-logo-grid">
-<div style="display:flex;align-items:center;justify-content:center;min-height:72px;padding:18px 16px;border:1px solid #e2e0d7;background:#ffffff"><img src="assets/logos/ec.png" alt="EC" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></div>
-<div style="display:flex;align-items:center;justify-content:center;min-height:72px;padding:18px 16px;border:1px solid #e2e0d7;background:#ffffff"><img src="assets/logos/mission-healthcare.png" alt="Mission Healthcare" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></div>
-<div style="display:flex;align-items:center;justify-content:center;min-height:72px;padding:18px 16px;border:1px solid #e2e0d7;background:#ffffff"><img src="assets/logos/cleana.png" alt="Cleana" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></div>
-<div style="display:flex;align-items:center;justify-content:center;min-height:72px;padding:18px 16px;border:1px solid #e2e0d7;background:#ffffff"><img src="assets/logos/rok.png" alt="ROK" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></div>
-<div style="display:flex;align-items:center;justify-content:center;min-height:72px;padding:18px 16px;border:1px solid #e2e0d7;background:#ffffff"><img src="assets/logos/topsort.png" alt="TopSort" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></div>
-<div style="display:flex;align-items:center;justify-content:center;min-height:72px;padding:18px 16px;border:1px solid #e2e0d7;background:#ffffff"><img src="assets/logos/vibrantcare.png" alt="VibrantCare" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></div>
-<div style="display:flex;align-items:center;justify-content:center;min-height:72px;padding:18px 16px;border:1px solid #e2e0d7;background:#ffffff"><img src="assets/logos/entwistle.png" alt="Entwistle" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></div>
-<div style="display:flex;align-items:center;justify-content:center;min-height:72px;padding:18px 16px;border:1px solid #e2e0d7;background:#ffffff"><img src="assets/logos/aps.png" alt="AP&S" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></div>
-<div style="display:flex;align-items:center;justify-content:center;min-height:72px;padding:18px 16px;border:1px solid #e2e0d7;background:#ffffff"><img src="assets/logos/securifens.png" alt="Securifens" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></div>
-<div style="display:flex;align-items:center;justify-content:center;min-height:72px;padding:18px 16px;border:1px solid #e2e0d7;background:#ffffff"><img src="assets/logos/tempus.png" alt="Tempus" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></div>
-<div style="display:flex;align-items:center;justify-content:center;min-height:72px;padding:18px 16px;border:1px solid #e2e0d7;background:#ffffff"><img src="assets/logos/viacore.png" alt="Viacore" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></div>
-<div style="display:flex;align-items:center;justify-content:center;min-height:72px;padding:18px 16px;border:1px solid #e2e0d7;background:#ffffff"><img src="assets/logos/ibi.png" alt="IBI" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></div>
+<a class="sl-logo-tile" href="https://www.linkup.so" target="_blank" rel="noopener noreferrer"><img src="assets/logos/linkup_logo.svg" alt="Linkup" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></a>
+<a class="sl-logo-tile" href="https://app.legionhealth.com" target="_blank" rel="noopener noreferrer"><img src="assets/logos/legion_logo.svg" alt="Legion Health" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></a>
+<a class="sl-logo-tile" href="https://laylo.com" target="_blank" rel="noopener noreferrer"><img src="assets/logos/laylo_logo.png" alt="Laylo" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></a>
+<a class="sl-logo-tile" href="https://hera.video" target="_blank" rel="noopener noreferrer"><img src="assets/logos/hero_logo.svg" alt="Hera" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></a>
+<a class="sl-logo-tile" href="https://anchr.tech" target="_blank" rel="noopener noreferrer"><img src="assets/logos/anchr_logo.svg" alt="Anchr" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></a>
+<a class="sl-logo-tile" href="https://www.findarbor.com" target="_blank" rel="noopener noreferrer"><img src="assets/logos/arbor_logo.svg" alt="Arbor" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></a>
+<a class="sl-logo-tile" href="https://www.closure-intel.com" target="_blank" rel="noopener noreferrer"><img src="assets/logos/closure_logo.png" alt="Closure" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></a>
+<a class="sl-logo-tile" href="https://www.aktos.ai" target="_blank" rel="noopener noreferrer"><img src="assets/logos/Aktos_logo.png" alt="Aktos" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></a>
+<a class="sl-logo-tile" href="https://www.earthstore.com" target="_blank" rel="noopener noreferrer"><img src="assets/logos/ec.png" alt="EarthStore" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></a>
+<a class="sl-logo-tile" href="https://www.homewithmission.com" target="_blank" rel="noopener noreferrer"><img src="assets/logos/mission-healthcare.png" alt="Mission Healthcare" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></a>
+<a class="sl-logo-tile" href="https://entwistleco.com" target="_blank" rel="noopener noreferrer"><img src="assets/logos/entwistle.png" alt="Entwistle" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></a>
+<a class="sl-logo-tile" href="https://vibrantcare.com" target="_blank" rel="noopener noreferrer"><img src="assets/logos/vibrantcare.png" alt="VibrantCare" style="max-height:28px;max-width:140px;width:auto;height:auto;object-fit:contain;filter:grayscale(1);opacity:0.85"></a>
 </div>
 </div>
 </section>
