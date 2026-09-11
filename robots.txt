@@ -1,0 +1,4 @@
+# SeekLab — https://theseeklab.com
+
+User-agent: *
+Allow: /
